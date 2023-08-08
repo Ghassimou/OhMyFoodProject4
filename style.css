@@ -1,1 +1,24 @@
-/*# sourceMappingURL=style.css.map */
+.box__P {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: salmon;
+}
+
+.box__E {
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  color: #16a085;
+}
+
+h1 {
+  font-family: helvetica, sans-serif;
+  color: #16a085;
+}/*# sourceMappingURL=style.css.map */
