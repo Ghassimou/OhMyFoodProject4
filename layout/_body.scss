@@ -1,0 +1,11 @@
+body
+{
+    @include flex__column--center;
+}
+
+.box__E
+{
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+}

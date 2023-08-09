@@ -1,3 +1,22 @@
-$font-stack: helvetica, sans-serif;
+@font-face {
+    font-family: "Roboto";
+    src: url("assets/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+  }
+$font-stack: ('Roboto', sans-serif);
+
+$primary--color: #9356DC;
+$secondary--color: #FF79DA;
+$secondary--color: #99E2D0;
+$background--color:#EAEAEA;
+$footer__background--color:#353535;
+$text--color: #FFF;
+
+$link__text--decoration: none;
+
+$padding--left--right:0 20px;
+
+
+
+
 
 

@@ -1,0 +1,10 @@
+footer {
+    @include flex__column--center;
+    background: $footer__background--color;
+    font-family: $font-stack;
+}
+
+a {
+    text-decoration: $link__text--decoration; 
+    color: $text--color;
+}

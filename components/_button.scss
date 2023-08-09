@@ -1,0 +1,11 @@
+/*.btn {
+    @extend %btn;
+    text-decoration: none;
+    background: $primary-color;
+    color: aquamarine;
+
+    &:hover {
+        background: lighten($primary-color: #000000, $amount: 0);
+    }
+}
+*/

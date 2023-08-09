@@ -1,16 +1,27 @@
+// @Import file utils
 @import 'utils/variables';
 @import 'utils/mixins';
-@import 'utils/colors';
-@import 'pages/home';
-@import 'pages/contact';
-@import 'base/base';
-@import 'base/reset';
-@import 'components/button';
-@import 'components/infobox';
-@import 'components/loader';
-@import 'components/meal-card';
+
+//@Import file base
+//@import 'base/base';
+//@import 'base/reset';
+//@import 'base/responsible';
+
+//@Import file components
+//@import 'components/button';
+//@import 'components/loader';
+//@import 'components/meal-card';
+
+//@Import file layout
 @import 'layout/body';
 @import 'layout/header';
-@import 'layout/navbar';
+@import 'layout/nav-bar';
 @import 'layout/main';
 @import 'layout/footer';
+
+//@Import file pages
+//@import 'pages/contact';
+@import 'pages/home-page';
+
+
+
