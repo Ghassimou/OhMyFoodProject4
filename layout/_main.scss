@@ -1,0 +1,23 @@
+//Media queries main
+.main__mobile--768{
+    @include mobile{
+        @include flex__column--center;
+    }
+}
+.headLiner__text--middle{
+    @extend .main__mobile--768;
+        h1{
+            font-family: $font-boldRoboto;
+            font-size: $fontBoldR24;
+            text-align: center;
+        }
+        p{
+        font-family: $font-lightRoboto;
+        font-size: $fontLightR18;
+        text-align: center;
+    }
+}
+.box__btn--light{
+    
+}
+ 

@@ -16,4 +16,9 @@
     @include flex__column--center;  
     background: $light-grey;
     width: 100%;
+    color:$font-grey;
+        i{
+            padding-right: 29px;
+        }
+
 }
