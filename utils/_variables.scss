@@ -1,20 +1,27 @@
+// Variables polices du logo et titres en "shirkhand"
 @font-face {
     font-family: "Roboto";
     src: url("assets/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
   }
-$font-stack: ('Roboto', sans-serif);
 
-$primary--color: #9356DC;
-$secondary--color: #FF79DA;
-$secondary--color: #99E2D0;
-$background--color:#EAEAEA;
-$footer__background--color:#353535;
-$text--color: #FFF;
+//Variable police du texte en "Roboto"
+$font-stack: ("Roboto", sans-serif);
 
-$link__text--decoration: none;
+//Variables color palettes for page
+$primary-font--purple: #9356DC;
+$secondary-light--pink: #FF79DA;
+$tertiaire_font--green: #008766;
+$tertiaire_light--green: #99E2D0;
 
-$padding--left--right:0 20px;
+//Seconde color palettes for page
+$font--grey:#353535;
+$light--grey:#E7E6E6;
+$font--blue: #003A68;
+$light--blue: #89C8FA;
 
+$white: #FFF;
+
+$logo--color:white;
 
 
 

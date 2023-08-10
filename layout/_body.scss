@@ -1,11 +1,10 @@
-body
-{
-    @include flex__column--center;
+body{
+    @include mobile{
+        @include flex__column--center;
+    }
 }
 
-.box__E
-{
-    width: 100px;
-    height: 100px;
-    background-color: bisque;
+h1{
+    color: lighten($font--grey,5%);//test color lighten
 }
+
