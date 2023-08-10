@@ -1,5 +1,12 @@
+//style svg logo ohmyfood 
+.logo__link--white{
+    display: block;
+    fill: $white;
+    width: 137.58px;
+    height: 27px;
+}
 //Media queries footer mobile
-footer {
+.footer__mobile--768 {
     @include mobile {
         @include flex__column--right;
         width: 100%;
@@ -8,14 +15,11 @@ footer {
     font-family: $font-stack;
     padding-left: 20px;
     color: $white;
+        p{
+            margin: 7px;
+        }
 }
-//style svg logo ohmyfood 
-.logo__footer--white{
-    display: block;
-    fill: $white;
-    width: 137.58px;
-    height: 27px;
-}
+
 
 //a {
     //color: darken($white,20%);// test color darken

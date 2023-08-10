@@ -1,0 +1,18 @@
+//Media queries header
+.header__mobile--768{
+    @include mobile{
+        @include flex__column--center;
+    }
+}
+//style logo color black
+.logo__link--black{
+    width: 162px;
+    height: 44px;
+    padding-top: 16px;
+}
+
+.navbar__text--icone{
+    @include flex__column--center;  
+    background: $light--grey;
+    width: 100%;
+}
