@@ -1,24 +1,33 @@
 
 //Variable police du texte en "Roboto"
-$font-stack: ("Roboto", sans-serif);
-$head--font:("Shrikhand", sans-serif);
-$logo--font:("Shrikhand", sans-serif);
+$font-boldRoboto: ('RobotoBold');
+$font-mediumRoboto: ('RobotoMedium');
+$font-regularRoboto: ('RobotoRegular');
+$font-lightRoboto: ('RobotoLight');
+$font-thinRoboto: ('RobotoThin');
+$font-regularShrikhand: ('ShrikhandRegular');
+
 
 //Variables color palettes for page
 $primary-font--purple: #9356DC;
 $secondary-light--pink: #FF79DA;
-$tertiaire_font--green: #008766;
-$tertiaire_light--green: #99E2D0;
+$tertiaire-font--green: #008766;
+$tertiaire-light--green: #99E2D0;
 
 //Seconde color palettes for page
-$font--grey:#353535;
-$light--grey:#E7E6E6;
-$font--blue: #003A68;
-$light--blue: #89C8FA;
+$font-grey:#353535;
+$light-grey:#E7E6E6;
+$font-blue: #003A68;
+$light-blue: #89C8FA;
 
 $white: #FFF;
 
-$logo--color:white;
+$logo-color:white;
+
+//size font
+
+$size-font--medium: 16px;
+$size-font--medium: 16px;
 
 
 

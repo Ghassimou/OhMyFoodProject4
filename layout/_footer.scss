@@ -10,13 +10,16 @@
     @include mobile {
         @include flex__column--right;
         width: 100%;
-        background: $font--grey;
+        background: $font-grey;
+        padding: 22px 20px;
     }
-    font-family: $font-stack;
-    padding-left: 20px;
-    color: $white;
         p{
+            font-family: $font-boldRoboto;
             margin: 7px;
+        }
+        a{
+            text-decoration: none;
+            color: $white;
         }
 }
 

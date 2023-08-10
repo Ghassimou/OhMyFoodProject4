@@ -6,7 +6,7 @@
 }
 //style logo color black
 .logo__link--black{
-    font-family: $head--font;
+    font-family: $font-regularShrikhand;
     width: 162px;
     height: 44px;
     margin-top: 16px;
@@ -14,6 +14,6 @@
 
 .navbar__text--icone{
     @include flex__column--center;  
-    background: $light--grey;
+    background: $light-grey;
     width: 100%;
 }
