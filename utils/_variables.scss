@@ -1,11 +1,8 @@
-// Variables polices du logo et titres en "shirkhand"
-@font-face {
-    font-family: "Roboto";
-    src: url("assets/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
-  }
 
 //Variable police du texte en "Roboto"
 $font-stack: ("Roboto", sans-serif);
+$head--font:("Shrikhand", sans-serif);
+$logo--font:("Shrikhand", sans-serif);
 
 //Variables color palettes for page
 $primary-font--purple: #9356DC;
@@ -22,6 +19,7 @@ $light--blue: #89C8FA;
 $white: #FFF;
 
 $logo--color:white;
+
 
 
 

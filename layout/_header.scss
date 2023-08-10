@@ -6,9 +6,10 @@
 }
 //style logo color black
 .logo__link--black{
+    font-family: $head--font;
     width: 162px;
     height: 44px;
-    padding-top: 16px;
+    margin-top: 16px;
 }
 
 .navbar__text--icone{
