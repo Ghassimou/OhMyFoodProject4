@@ -34,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .header__mobile--768 {
     display: flex;
     flex-direction: column;
@@ -61,25 +61,40 @@ a {
   padding-right: 29px;
 }
 
-@media screen and (max-width: 768px) {
-  .main__mobile--768, .headLiner__text--middle {
+@media (max-width: 768px) {
+  .main__mobile--768 {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .main__mobile--768 .headLiner__text--middle h1 {
+    font-family: "RobotoBold";
+    font-size: 24px;
+  }
+  .main__mobile--768 .headLiner__text--middle p {
+    font-family: "RobotoLight";
+    font-size: 18px;
+  }
 }
 
-.headLiner__text--middle h1 {
-  font-family: "RobotoBold";
-  font-size: 24px;
-  text-align: center;
-}
-.headLiner__text--middle p {
-  font-family: "RobotoLight";
-  font-size: 18px;
-  text-align: center;
+/*section{
+    @include mobile{
+        @include flex__column--center;
+        h2{
+            @include style-font('RobotoBold',24px);
+        } 
+    }
 }
 
+.box__btn--light{
+
+} 
+
+
+.box__card--menu{
+
+}
+*/
 .logo__link--white {
   display: block;
   fill: #FFF;
@@ -87,11 +102,8 @@ a {
   height: 27px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .footer__mobile--768 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     width: 100%;
     background: #353535;
     padding: 22px 20px;

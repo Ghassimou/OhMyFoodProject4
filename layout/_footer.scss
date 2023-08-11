@@ -5,16 +5,17 @@
     width: 137.58px;
     height: 27px;
 }
+
 //Media queries footer mobile
 .footer__mobile--768 {
-    @include mobile {
-        @include flex__column--right;
+    @include breakpoints('mobile') {
+        //@include flex__column--right;
         width: 100%;
         background: $font-grey;
         padding: 22px 20px;
     }
         p{
-            font-family: $font-boldRoboto;
+            font-family: $bold-roboto;
             margin: 7px;
         }
         a{

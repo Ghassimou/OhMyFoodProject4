@@ -1,23 +1,34 @@
 //Media queries main
 .main__mobile--768{
+    @include breakpoints('mobile'){
+        @include flex__column--center;
+        .headLiner__text--middle{
+            h1{
+                @include style-font('RobotoBold', 24px);
+            }
+           
+            p{
+                @include style-font('RobotoLight',18px);
+            }
+        }
+    }
+}
+
+/*section{
     @include mobile{
         @include flex__column--center;
+        h2{
+            @include style-font('RobotoBold',24px);
+        } 
     }
 }
-.headLiner__text--middle{
-    @extend .main__mobile--768;
-        h1{
-            font-family: $font-boldRoboto;
-            font-size: $fontBoldR24;
-            text-align: center;
-        }
-        p{
-        font-family: $font-lightRoboto;
-        font-size: $fontLightR18;
-        text-align: center;
-    }
-}
+
 .box__btn--light{
-    
+   
+} 
+
+
+.box__card--menu{
+   
 }
- 
+*/

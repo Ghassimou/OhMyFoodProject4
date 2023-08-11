@@ -1,80 +1,89 @@
-//Test responsive only-mobile
-@mixin mobile {
-    @media screen and (max-width: 768px) {
-        @content;
+//responsive only-screen 
+@mixin breakpoints($screen) {
+    @if $screen == 'mobile' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $screen == 'tablete' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $screen == 'desktop' {
+        @media (max-width: 1440px) {
+            @content;
+        }
     }
 }
-@mixin tablete {
-    @media screen and (max-width: 1024px) {
-        @content;
-    }
-}
-@mixin desktop {
-    @media screen and (max-width: 1440px) {
-        @content;
-    }
-}
-
 //align the flexible cross-axis
-@mixin flex__column--right
-{
+@mixin flex__column--right{
     
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-@mixin flex__column--left
-{
+@mixin flex__column--left{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-@mixin flex__column--center
-{
+@mixin flex__column--center{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 //align the flexible main-axis
-@mixin flex__row--right
-{
+@mixin flex__row--right{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
 
-@mixin flex__row--left
-{
+@mixin flex__row--left{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
 }
 
-@mixin flex__row--center
-{
+@mixin flex__row--center{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 //align the flexible container's
-@mixin flex__around
-{
+@mixin flex__around{
     justify-content: space-around;
 }
 
-@mixin flex__between
-{
+@mixin flex__between{
     justify-content: space-between;
 }
 
-@mixin flex__evenly
-{
+@mixin flex__evenly{
     justify-content: space-evenly;
 }
+
+//test mixins font-family
+@mixin h1{
+    font-family: $bold-roboto;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+//test mixins font-family param deleted
+@mixin style-font($bold-roboto:'RobotoBold',$size:24px,$weight:bold){
+    font-family: $bold-roboto;
+    font-size: $size;
+}
+
+
+
 
 
 
