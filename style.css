@@ -50,11 +50,9 @@ a {
   font-family: "Shrikhand";
   font-size: 30px;
   text-align: center;
-  color: black;
 }
 
 .navbar__text--icone {
-  background: #E7E6E6;
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: center;
@@ -65,7 +63,6 @@ a {
 }
 
 .headLiner__text--middle {
-  background: #9a9a9a;
   width: 100%;
 }
 .headLiner__text--middle h1 {
@@ -94,7 +91,6 @@ a {
 @media (max-width: 768px) {
   .footer__mobile--768 {
     width: 100%;
-    background: #353535;
     padding: 22px 20px;
   }
 }

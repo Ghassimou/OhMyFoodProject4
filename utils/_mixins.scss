@@ -37,9 +37,17 @@
 }
 
 //Mixins management color and background
-@mixin color-font($couleur, $valeur){
-    #{$couleur}: $valeur;
+@mixin color-font($color, $valeur){
+    #{$color}: $valeur;
 }
+
+
+@mixin color-font($color, $valeur){
+
+}
+
+
+
 
 
 
