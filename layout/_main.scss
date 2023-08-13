@@ -1,25 +1,19 @@
 //Media queries main
 .main__mobile--768{
+    @extend %flex-column-center;
     @include breakpoints('mobile'){
-        @include flex__column--center;
-        .headLiner__text--middle{
-            h1{
-                @include style-font('RobotoBold', 24px);
-            }
-           
-            p{
-                @include style-font('RobotoLight',18px);
-            }
-        }
+
     }
 }
 
-/*section{
-    @include mobile{
-        @include flex__column--center;
-        h2{
-            @include style-font('RobotoBold',24px);
-        } 
+.headLiner__text--middle{
+    @include color-font(background, $backround-headliner);
+    width: 100%;
+    h1 {
+        @include style-font('RobotoBold', 24px, center);
+    }
+    p {
+        @include style-font('RobotoLight', 18px, center);
     }
 }
 
@@ -31,4 +25,3 @@
 .box__card--menu{
    
 }
-*/

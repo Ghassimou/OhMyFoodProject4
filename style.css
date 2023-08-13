@@ -19,8 +19,8 @@
   src: url("assets/fonts/Roboto/Roboto-Thin.ttf") format("truetype");
 }
 @font-face {
-  font-family: "ShrikhandRegular";
-  src: url("assets/fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-family: "Shrikhand";
+  src: url("assets/fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
@@ -34,72 +34,61 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .header__mobile--768 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.footer__mobile--768 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.logo__link--black {
-  font-family: "ShrikhandRegular";
-  width: 162px;
-  height: 44px;
-  margin-top: 16px;
-}
-
-.navbar__text--icone {
+.main__mobile--768, .header__mobile--768 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.logo__link--black {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+
+.navbar__text--icone {
   background: #E7E6E6;
+  font-family: "RobotoMedium";
+  font-size: 16px;
+  text-align: center;
   width: 100%;
-  color: #353535;
 }
 .navbar__text--icone i {
   padding-right: 29px;
 }
 
-@media (max-width: 768px) {
-  .main__mobile--768 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .main__mobile--768 .headLiner__text--middle h1 {
-    font-family: "RobotoBold";
-    font-size: 24px;
-  }
-  .main__mobile--768 .headLiner__text--middle p {
-    font-family: "RobotoLight";
-    font-size: 18px;
-  }
+.headLiner__text--middle {
+  background: #9a9a9a;
+  width: 100%;
+}
+.headLiner__text--middle h1 {
+  font-family: "RobotoBold";
+  font-size: 24px;
+  text-align: center;
+}
+.headLiner__text--middle p {
+  font-family: "RobotoLight";
+  font-size: 18px;
+  text-align: center;
 }
 
-/*section{
-    @include mobile{
-        @include flex__column--center;
-        h2{
-            @include style-font('RobotoBold',24px);
-        } 
-    }
-}
-
-.box__btn--light{
-
-} 
-
-
-.box__card--menu{
-
-}
-*/
 .logo__link--white {
-  display: block;
-  fill: #FFF;
-  width: 137.58px;
-  height: 27px;
+  font-family: "RobotoRegular";
+  font-size: 30px;
+  text-align: center;
+}
+
+.logo__link--white2 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -110,7 +99,7 @@ a {
   }
 }
 .footer__mobile--768 p {
-  font-family: "RobotoBold";
+  font-family: "RobotoRegular";
   margin: 7px;
 }
 .footer__mobile--768 a {

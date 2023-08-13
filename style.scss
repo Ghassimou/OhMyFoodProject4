@@ -6,6 +6,8 @@
 // Import file utils
 @import 'utils/variables';
 @import 'utils/mixins';
+@import 'utils/placeholder';
+
 
 //Import file components
 //@import 'components/button';
@@ -16,10 +18,3 @@
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/footer';
-
-//@Import file pages
-//@import 'pages/contact';
-@import 'pages/home-page';
-
-
-

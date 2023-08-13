@@ -1,21 +1,22 @@
 //style svg logo ohmyfood 
 .logo__link--white{
-    display: block;
-    fill: $white;
-    width: 137.58px;
-    height: 27px;
+    @include style-font('RobotoRegular');
+}
+
+.logo__link--white2{
+    @include style-font('Shrikhand');
 }
 
 //Media queries footer mobile
 .footer__mobile--768 {
+    @extend %flex-column-right;
     @include breakpoints('mobile') {
-        //@include flex__column--right;
         width: 100%;
-        background: $font-grey;
+        @include color-font(background,$font-grey);
         padding: 22px 20px;
     }
         p{
-            font-family: $bold-roboto;
+            font-family: 'RobotoRegular';
             margin: 7px;
         }
         a{
