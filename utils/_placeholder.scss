@@ -34,3 +34,16 @@
     flex-direction: row;
     align-items: center;
 }
+%btn-round{
+    @include style-font('RobotoMedium',16px);
+    height: 72.38px;  
+    border-radius: 20px;
+}
+%btn-purple{
+    @include color-font(color,white);
+    @include color-font(background,purple);
+}
+%btn-lighten-grey{
+    @include color-font(color,black);
+    @include color-font(background, $color-lighten-grey);
+}

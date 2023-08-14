@@ -46,13 +46,33 @@ a {
   align-items: center;
 }
 
+.btn-round {
+  font-family: "RobotoMedium";
+  font-size: 16px;
+  text-align: center;
+  height: 72.38px;
+  border-radius: 20px;
+}
+
+.btn-purple {
+  color: white;
+  background: purple;
+}
+
+.btn__light--grey {
+  color: black;
+  background: #f4f4f4;
+}
+
 .logo__link--black {
   font-family: "Shrikhand";
   font-size: 30px;
   text-align: center;
+  color: black;
 }
 
 .navbar__text--icone {
+  background: #E7E6E6;
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: center;
@@ -63,6 +83,7 @@ a {
 }
 
 .headLiner__text--middle {
+  background: #f4f4f4;
   width: 100%;
 }
 .headLiner__text--middle h1 {
@@ -74,6 +95,12 @@ a {
   font-family: "RobotoLight";
   font-size: 18px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .box__btn--light {
+    flex-grow: 1;
+  }
 }
 
 .logo__link--white {
@@ -91,6 +118,7 @@ a {
 @media (max-width: 768px) {
   .footer__mobile--768 {
     width: 100%;
+    background: #353535;
     padding: 22px 20px;
   }
 }

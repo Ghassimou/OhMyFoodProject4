@@ -16,17 +16,22 @@
         }
     }
 }
+//align the flexible cross-axis
+@mixin flex-cross($align-items: center){
+    display: flex;
+    flex-direction: column;
+    align-items: $align-items;
+}
+//align the flexible main-axis
+@mixin flex-main($align-items: center){
+    display: flex;
+    flex-direction: row;
+    align-items: $align-items;
+}
+
 //align the flexible container's
-@mixin flex__around{
-    justify-content: space-around;
-}
-
-@mixin flex__between{
-    justify-content: space-between;
-}
-
-@mixin flex__evenly{
-    justify-content: space-evenly;
+@mixin flex-conten($justify-content: space-around){
+    justify-content:$justify-content;
 }
 
 //Mixins font-family with editable arguments
@@ -40,22 +45,3 @@
 @mixin color-font($color, $valeur){
     #{$color}: $valeur;
 }
-
-
-@mixin color-font($color, $valeur){
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-

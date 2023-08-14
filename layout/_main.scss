@@ -7,7 +7,7 @@
 }
 
 .headLiner__text--middle{
-    @include color-font(background, $backround-headliner);
+    @include color-font(background, $color-lighten-grey);
     width: 100%;
     h1 {
         @include style-font('RobotoBold', 24px, center);
@@ -17,10 +17,24 @@
     }
 }
 
-.box__btn--light{
-   
-} 
+.btn-round{
+    @extend %btn-round;
+}
+.btn-purple{
+    @extend %btn-purple;
+}
+.btn__light--grey{
+    @extend %btn-lighten-grey;
+}
 
+.box__btn--light{
+    //@include flex-main(center);
+    @include breakpoints('mobile'){
+        flex-grow: 1;
+
+    }
+    
+} 
 
 .box__card--menu{
    
