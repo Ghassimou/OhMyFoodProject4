@@ -56,12 +56,20 @@ a {
 
 .btn-purple {
   color: white;
-  background: purple;
+  background: rgb(210, 99, 222);
 }
 
 .btn__light--grey {
   color: black;
-  background: #f4f4f4;
+  background: #f7f7f7;
+}
+
+.btn-purple:hover {
+  background: purple;
+}
+
+.btn__light--grey:hover {
+  background: #003A68;
 }
 
 .logo__link--black {
@@ -82,25 +90,30 @@ a {
   padding-right: 29px;
 }
 
-.headLiner__text--middle {
-  background: #f4f4f4;
+.section__headLiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7f7f7;
   width: 100%;
 }
-.headLiner__text--middle h1 {
+
+.headliner__tile--bold {
   font-family: "RobotoBold";
   font-size: 24px;
   text-align: center;
 }
-.headLiner__text--middle p {
+
+.headliner__title--light {
   font-family: "RobotoLight";
   font-size: 18px;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .box__btn--light {
-    flex-grow: 1;
-  }
+.section__title {
+  font-family: "RobotoBold";
+  font-size: 24px;
+  text-align: left;
 }
 
 .logo__link--white {

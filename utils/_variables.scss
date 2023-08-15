@@ -10,5 +10,7 @@ $light-grey:#E7E6E6;
 $font-blue: #003A68;
 $light-blue: #89C8FA;
 $white: #FFF;
-$color-lighten-grey:lighten(grey,45.5%);
+
+$lighten-grey:lighten($font-grey,76%);
+$linear-purple:(rgba(210, 99, 222, 100));
 

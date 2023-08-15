@@ -1,39 +1,30 @@
 //Media queries main
 .main__mobile--768{
     @extend %flex-column-center;
-    @include breakpoints('mobile'){
-
-    }
+    @include breakpoints('mobile');
 }
 
-.headLiner__text--middle{
-    @include color-font(background, $color-lighten-grey);
-    width: 100%;
-    h1 {
-        @include style-font('RobotoBold', 24px, center);
-    }
-    p {
-        @include style-font('RobotoLight', 18px, center);
-    }
+.section__headLiner{
+    @include flex-cross;
+    @include color-font(background, $lighten-grey);
+    width: 100%;  
 }
 
-.btn-round{
-    @extend %btn-round;
-}
-.btn-purple{
-    @extend %btn-purple;
-}
-.btn__light--grey{
-    @extend %btn-lighten-grey;
+.headliner__tile--bold{
+    @include style-font('RobotoBold', 24px, center);
 }
 
-.box__btn--light{
+.headliner__title--light{
+    @include style-font('RobotoLight', 18px, center);
+}
+
+.section__title{
+    @include style-font('RobotoBold', 24px, left);
+}
+
+.bloc__btn--light{
     //@include flex-main(center);
-    @include breakpoints('mobile'){
-        flex-grow: 1;
-
-    }
-    
+    @include breakpoints('mobile')   
 } 
 
 .box__card--menu{

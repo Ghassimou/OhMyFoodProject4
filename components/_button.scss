@@ -1,11 +1,18 @@
-/*.btn {
-    @extend %btn;
-    text-decoration: none;
-    background: $primary-color;
-    color: aquamarine;
+// btn 
+.btn-round{
+    @extend %btn-round;
+}
+.btn-purple{
+    @extend %btn-purple;
 
     &:hover {
-        background: lighten($primary-color: #000000, $amount: 0);
+        background:(purple);
     }
 }
-*/
+.btn__light--grey{
+    @extend %btn-lighten-grey;
+
+    &:hover {
+        background:($font-blue);
+    }
+}

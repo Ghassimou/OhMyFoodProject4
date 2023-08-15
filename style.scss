@@ -1,16 +1,14 @@
 //Import file base
 @import 'base/base';
 @import 'base/reset';
-//@import 'base/normalize';
 
 // Import file utils
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/placeholder';
 
-
 //Import file components
-//@import 'components/button';
+@import 'components/button';
 //@import 'components/loader';
 //@import 'components/meal-card';
 

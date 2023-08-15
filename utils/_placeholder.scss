@@ -41,9 +41,9 @@
 }
 %btn-purple{
     @include color-font(color,white);
-    @include color-font(background,purple);
+    @include color-font(background,$linear-purple);
 }
 %btn-lighten-grey{
     @include color-font(color,black);
-    @include color-font(background, $color-lighten-grey);
+    @include color-font(background, $lighten-grey);
 }
