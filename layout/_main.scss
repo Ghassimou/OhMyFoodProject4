@@ -1,34 +1,66 @@
-//Media queries main
-.main__mobile--768 {
-  @include breakpoints("mobile"){
-    @include flex-cross;
-  }
-}
-
-.section__headLiner {
-  @include flex-cross;
-  @include color-font(background, $lighten-grey);
+main{
   width: 100%;
 }
-
-.headliner__tile--bold {
-  @include style-font("RobotoBold", 24px, center);
-}
-
-.headliner__title--light {
-  @include style-font("RobotoLight", 18px, center);
+.section__headLiner {
+  @include flex-cross;
+  @include flex-conten(center);
+  @include color-font(background, $lighten-grey);
+  width: 100%;
+  height: 354px;
+  h1{
+    @include style-font("RobotoBold", 24px);
+    padding-bottom: 20px;
+  }
+  p{
+    @include style-font("RobotoLight", 18px);
+    padding-bottom: 30px;
+  }
 }
 
 .section__title {
   @include style-font("RobotoBold", 24px, left);
+  @include color-font(background, $lighten-grey);
+  padding-bottom: 20px;
 }
 
-.bloc__btn--light {
-    @include flex-cross(center);
-    @include flex-conten(space-between);
-    height: 272px;
-  
+.section__btn--light {
+  height: 272px;
+}
+
+.bloc__btn--light{
+  @include flex-cross(center);
+  gap: 20px;
+}
+
+.section__card--menu{
+  @include flex-cross(unset);
+  @include color-font(background, $lighten-grey);
 }
 
 .bloc__card--menu {
+  @include flex-cross(center);
+  .link__clic{
+    width: 91%;
+  }
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 174px;
+  }
+}
+
+.new__bg-green {
+  @include color-font(background, $tertiaire-light-green);
+  @include color-font(color, $tertiaire-font-green);
+  @include style-font("RobotoMedium", 14px, center);
+}
+.card-content{
+  @include flex-cross(start);
+  @include color-font(color, black);
+}
+.card-title{
+  @include style-font("RobotoBolt", 18px,start);
+}
+.card-subtitle{
+  @include style-font("RobotoLignt", 17px,start);
 }

@@ -36,12 +36,6 @@ li {
   list-style: none;
 }
 
-.footer__mobile--768 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .btn-round {
   font-family: "RobotoMedium";
   font-size: 16px;
@@ -87,14 +81,6 @@ li {
   color: #7e7e7e;
 }
 
-.new__bg-green {
-  background: #99e2d0;
-  color: #008766;
-  font-family: "RobotoMedium";
-  font-size: 14px;
-  text-align: center;
-}
-
 @media (max-width: 768px) {
   body {
     display: flex;
@@ -137,66 +123,120 @@ li {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .main__mobile--768 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+main {
+  width: 100%;
 }
 
 .section__headLiner {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: #f7f7f7;
   width: 100%;
+  height: 354px;
 }
-
-.headliner__tile--bold {
+.section__headLiner h1 {
   font-family: "RobotoBold";
   font-size: 24px;
   text-align: center;
+  padding-bottom: 20px;
 }
-
-.headliner__title--light {
+.section__headLiner p {
   font-family: "RobotoLight";
   font-size: 18px;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .section__title {
   font-family: "RobotoBold";
   font-size: 24px;
   text-align: left;
+  background: #f7f7f7;
+  padding-bottom: 20px;
+}
+
+.section__btn--light {
+  height: 272px;
 }
 
 .bloc__btn--light {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 272px;
+  gap: 20px;
 }
 
-.logo__link--white {
-  font-family: "Shrikhand";
-  font-size: 30px;
+.section__card--menu {
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  background: #f7f7f7;
+}
+
+.bloc__card--menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bloc__card--menu .link__clic {
+  width: 91%;
+}
+.bloc__card--menu img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 174px;
+}
+
+.new__bg-green {
+  background: #99e2d0;
+  color: #008766;
+  font-family: "RobotoMedium";
+  font-size: 14px;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .footer__mobile--768 {
-    width: 100%;
-    background: #353535;
-    padding: 22px 20px;
-  }
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: black;
 }
-.footer__mobile--768 p {
-  font-family: "RobotoRegular";
-  margin: 7px;
+
+.card-title {
+  font-family: "RobotoBolt";
+  font-size: 18px;
+  text-align: start;
 }
-.footer__mobile--768 a {
-  text-decoration: none;
+
+.card-subtitle {
+  font-family: "RobotoLignt";
+  font-size: 17px;
+  text-align: start;
+}
+
+.footer__link--grey {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 5px;
+  background: #353535;
+  padding: 22px 20px;
+  width: 100%;
+}
+.footer__link--grey .logo__link--white {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  text-align: start;
+}
+.footer__link--grey a {
   color: #fff;
+  font-family: "RobotoMedium";
+  font-size: 16px;
+  text-align: start;
+}
+.footer__link--grey i {
+  padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */

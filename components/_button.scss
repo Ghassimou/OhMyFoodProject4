@@ -36,8 +36,4 @@
   @include color-font(color, $light-grey);
 }
 
-.new__bg-green {
-  @include color-font(background, $tertiaire-light-green);
-  @include color-font(color, $tertiaire-font-green);
-  @include style-font("RobotoMedium", 14px, center);
-}
+
