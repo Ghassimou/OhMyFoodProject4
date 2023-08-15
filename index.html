@@ -57,16 +57,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header__nav header__mobile--768">
-      <nav>
-        <a class="logo__link--black" href="#">ohmyfood</a>
-      </nav>
-      <nav class="navbar__text--icone">
-        <p>
-          <i class="fa-solid fa-location-dot"></i><span>Paris, Belleville</span>
-        </p>
-      </nav>
+    <header class="header__nav">
+      <a class="logo__link--black" href="#">ohmyfood</a>
     </header>
+    <nav class="nav__list--grey">
+      <ul>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Paris, Belleville</span>
+        </li>
+      </ul>
+    </nav>
     <main class="main__mobile--768">
       <section class="section__headLiner">
         <h1 class="headliner__title--bold">
@@ -79,8 +80,8 @@
       </section>
       <section class="section__btn--light">
         <h2 class="section__title">Fonctionnement</h2>
-        <article>
-          <div class="bloc__btn--light">
+        <article class="bloc__btn--light">
+          <div>
             <span class="circle__number">1</span>
             <i class="fa-solid icone__btn--light fa-mobile-screen-button"></i>
             <button class="btn-round btn__light--grey">
@@ -88,7 +89,7 @@
             </button>
           </div>
 
-          <div class="bloc__btn--light">
+          <div>
             <span class="circle__number">2</span>
             <i class="fa-solid icone__btn--light fa-list"></i>
             <button class="btn-round btn__light--grey">
@@ -96,7 +97,7 @@
             </button>
           </div>
 
-          <div class="bloc__btn--light">
+          <div>
             <span class="circle__number">3</span>
             <i class="fa-solid icone__btn--light fa-store"></i>
             <button class="btn-round btn__light--grey">

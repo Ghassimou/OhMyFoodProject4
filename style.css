@@ -24,26 +24,22 @@
 }
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .footer__mobile--768 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.main__mobile--768, .header__mobile--768 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .btn-round {
@@ -69,7 +65,7 @@ a {
 }
 
 .btn__light--grey:hover {
-  background: #003A68;
+  background: #003a68;
 }
 
 .circle__number {
@@ -80,40 +76,72 @@ a {
 }
 
 .icone__btn--light {
-  color: #7E7E7E;
+  color: #7e7e7e;
+  font-size: 16px;
 }
 .icone__btn--light:hover {
   color: rgb(210, 99, 222);
 }
 
 .icone__heart--light {
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 
 .new__bg-green {
-  background: #99E2D0;
+  background: #99e2d0;
   color: #008766;
   font-family: "RobotoMedium";
   font-size: 14px;
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 18px;
+}
+
 .logo__link--black {
+  color: black;
   font-family: "Shrikhand";
   font-size: 30px;
   text-align: center;
-  color: black;
 }
 
-.navbar__text--icone {
-  background: #7E7E7E;
+.nav__list--grey {
+  background: #EAEAEA;
+  width: 100%;
+}
+.nav__list--grey li {
+  color: #353535;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  gap: 29px;
+}
+.nav__list--grey span {
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: center;
-  width: 100%;
 }
-.navbar__text--icone i {
-  padding-right: 29px;
+
+@media (max-width: 768px) {
+  .main__mobile--768 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .section__headLiner {
@@ -142,6 +170,14 @@ a {
   text-align: left;
 }
 
+.bloc__btn--light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 272px;
+}
+
 .logo__link--white {
   font-family: "Shrikhand";
   font-size: 30px;
@@ -161,5 +197,5 @@ a {
 }
 .footer__mobile--768 a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

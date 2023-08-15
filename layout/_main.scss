@@ -1,7 +1,8 @@
 //Media queries main
 .main__mobile--768 {
-  @extend %flex-column-center;
-  @include breakpoints("mobile");
+  @include breakpoints("mobile"){
+    @include flex-cross;
+  }
 }
 
 .section__headLiner {
@@ -23,8 +24,10 @@
 }
 
 .bloc__btn--light {
-  //@include flex-main(center);
-  @include breakpoints("mobile");
+    @include flex-cross(center);
+    @include flex-conten(space-between);
+    height: 272px;
+  
 }
 
 .bloc__card--menu {

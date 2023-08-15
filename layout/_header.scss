@@ -1,20 +1,32 @@
 //Media queries header
-.header__mobile--768 {
-  @extend %flex-column-center;
-  @include breakpoints("mobile") {
+body{ 
+  @include breakpoints("mobile"){
+    @include flex-cross(center);
   }
+}
+//header layout
+.header__nav {
+    @include flex-cross(center);
+    padding-top: 18px;
 }
 //style logo color black
-.logo__link--black {
-  @include style-font();
-  @include color-font(color, black);
+.logo__link--black{
+    @include color-font(color, black);
+    @include style-font();
 }
-//style navigation
-.navbar__text--icone {
-  @include color-font(background, $light-grey);
-  @include style-font("RobotoMedium", 16px);
+//style navigation icone
+.nav__list--grey {
+  @include color-font(background, $bg-nav);
   width: 100%;
-  i {
-    padding-right: 29px;
+  li{
+    @include color-font(color, $font-grey);
+    @include flex-main(center);
+    @include flex-conten(center);
+    height:50px;
+    gap: 29px;
+  }
+  span{
+    @include style-font("RobotoMedium",16px);
   }
 }
+
