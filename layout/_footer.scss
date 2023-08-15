@@ -1,27 +1,26 @@
-//style svg logo ohmyfood 
-.logo__link--white{
-    @include style-font('Shrikhand');
+//style svg logo ohmyfood
+.logo__link--white {
+  @include style-font("Shrikhand");
 }
 
 //Media queries footer mobile
 .footer__mobile--768 {
-    @extend %flex-column-right;
-    @include breakpoints('mobile') {
-        width: 100%;
-        @include color-font(background,$font-grey);
-        padding: 22px 20px;
-    }
-        p{
-            font-family: 'RobotoRegular';
-            margin: 7px;
-        }
-        a{
-            text-decoration: none;
-            color: $white;
-        }
+  @extend %flex-column-right;
+  @include breakpoints("mobile") {
+    width: 100%;
+    @include color-font(background, $font-grey);
+    padding: 22px 20px;
+  }
+  p {
+    font-family: "RobotoRegular";
+    margin: 7px;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
 }
 
-
 //a {
-    //color: darken($white,20%);// test color darken
+//color: darken($white,20%);// test color darken
 //}

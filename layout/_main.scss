@@ -1,32 +1,31 @@
 //Media queries main
-.main__mobile--768{
-    @extend %flex-column-center;
-    @include breakpoints('mobile');
+.main__mobile--768 {
+  @extend %flex-column-center;
+  @include breakpoints("mobile");
 }
 
-.section__headLiner{
-    @include flex-cross;
-    @include color-font(background, $lighten-grey);
-    width: 100%;  
+.section__headLiner {
+  @include flex-cross;
+  @include color-font(background, $lighten-grey);
+  width: 100%;
 }
 
-.headliner__tile--bold{
-    @include style-font('RobotoBold', 24px, center);
+.headliner__tile--bold {
+  @include style-font("RobotoBold", 24px, center);
 }
 
-.headliner__title--light{
-    @include style-font('RobotoLight', 18px, center);
+.headliner__title--light {
+  @include style-font("RobotoLight", 18px, center);
 }
 
-.section__title{
-    @include style-font('RobotoBold', 24px, left);
+.section__title {
+  @include style-font("RobotoBold", 24px, left);
 }
 
-.bloc__btn--light{
-    //@include flex-main(center);
-    @include breakpoints('mobile')   
-} 
+.bloc__btn--light {
+  //@include flex-main(center);
+  @include breakpoints("mobile");
+}
 
-.bloc__card--menu{
-   
+.bloc__card--menu {
 }

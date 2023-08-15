@@ -1,47 +1,45 @@
-//Responsive only-screen 
+//Responsive only-screen
 @mixin breakpoints($screen) {
-    @if $screen == 'mobile' {
-        @media (max-width: 768px) {
-            @content;
-        }
+  @if $screen == "mobile" {
+    @media (max-width: 768px) {
+      @content;
     }
-    @else if $screen == 'tablete' {
-        @media (max-width: 1024px) {
-            @content;
-        }
+  } @else if $screen == "tablete" {
+    @media (max-width: 1024px) {
+      @content;
     }
-    @else if $screen == 'desktop' {
-        @media (max-width: 1440px) {
-            @content;
-        }
+  } @else if $screen == "desktop" {
+    @media (max-width: 1440px) {
+      @content;
     }
+  }
 }
 //align the flexible cross-axis
-@mixin flex-cross($align-items: center){
-    display: flex;
-    flex-direction: column;
-    align-items: $align-items;
+@mixin flex-cross($align-items: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align-items;
 }
 //align the flexible main-axis
-@mixin flex-main($align-items: center){
-    display: flex;
-    flex-direction: row;
-    align-items: $align-items;
+@mixin flex-main($align-items: center) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align-items;
 }
 
 //align the flexible container's
-@mixin flex-conten($justify-content: space-around){
-    justify-content:$justify-content;
+@mixin flex-conten($justify-content: space-around) {
+  justify-content: $justify-content;
 }
 
 //Mixins font-family with editable arguments
-@mixin style-font($font-family: 'Shrikhand', $size:30px, $text-align: center){
-    font-family: $font-family;
-    font-size: $size;
-    text-align: $text-align ;  
+@mixin style-font($font-family: "Shrikhand", $size: 30px, $text-align: center) {
+  font-family: $font-family;
+  font-size: $size;
+  text-align: $text-align;
 }
 
 //Mixins management color and background
-@mixin color-font($color, $valeur){
-    #{$color}: $valeur;
+@mixin color-font($color, $valeur) {
+  #{$color}: $valeur;
 }

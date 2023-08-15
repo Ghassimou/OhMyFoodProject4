@@ -1,21 +1,20 @@
 //Media queries header
-.header__mobile--768{
-    @extend %flex-column-center;
-    @include breakpoints('mobile'){
-        
-    }
+.header__mobile--768 {
+  @extend %flex-column-center;
+  @include breakpoints("mobile") {
+  }
 }
 //style logo color black
-.logo__link--black{
-    @include style-font();
-    @include color-font(color,black); 
+.logo__link--black {
+  @include style-font();
+  @include color-font(color, black);
 }
 //style navigation
-.navbar__text--icone{
-    @include color-font(background,$light-grey);
-    @include style-font('RobotoMedium', 16px);
-    width:100%;
-       i{
-        padding-right: 29px;
-    }
+.navbar__text--icone {
+  @include color-font(background, $light-grey);
+  @include style-font("RobotoMedium", 16px);
+  width: 100%;
+  i {
+    padding-right: 29px;
+  }
 }
