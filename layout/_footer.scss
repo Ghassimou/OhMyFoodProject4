@@ -1,9 +1,5 @@
 //style svg logo ohmyfood 
 .logo__link--white{
-    @include style-font('RobotoRegular');
-}
-
-.logo__link--white2{
     @include style-font('Shrikhand');
 }
 

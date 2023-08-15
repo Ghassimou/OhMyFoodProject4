@@ -16,3 +16,27 @@
         background:($font-blue);
     }
 }
+//Circle number
+.circle__number{
+    padding: 10px 14px;
+    border-radius: 50%;
+    @include color-font(background, $linear-purple);
+    @include color-font(color, white);
+}
+.icone__btn--light{
+    @include color-font(color, $light-grey);
+
+    &:hover {
+        color:($linear-purple);
+    }
+}
+
+.icone__heart--light{
+    @include color-font(color, $light-grey);
+}
+
+.new__bg-green{
+    @include color-font(background, $tertiaire-light-green);
+    @include color-font(color, $tertiaire-font-green);
+    @include style-font('RobotoMedium', 14px, center);
+}
