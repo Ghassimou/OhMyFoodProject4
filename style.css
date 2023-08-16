@@ -36,49 +36,44 @@ li {
   list-style: none;
 }
 
-.btn-round {
+.btn__light--grey, .btn-purple {
+  border: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: black;
+  border-radius: 20px;
+  border: none;
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: center;
-  height: 72.38px;
-  border-radius: 20px;
 }
-
-.btn-purple {
-  color: white;
-  background: rgb(210, 99, 222);
-}
-
-.btn__light--grey {
-  color: black;
-  background: #f7f7f7;
-}
-
-.btn-purple:hover {
-  background: purple;
-}
-
-.btn__light--grey:hover {
+.btn__light--grey:hover, .btn-purple:hover {
   background: #003a68;
 }
 
-.circle__number {
-  padding: 10px 14px;
-  border-radius: 50%;
+.btn-purple {
   background: rgb(210, 99, 222);
-  color: white;
+  color: #fff;
+  border-radius: 30px;
+  border: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btn-purple:hover {
+  background: #003a68;
 }
 
-.icone__btn--light {
-  color: #7e7e7e;
-  font-size: 16px;
-}
-.icone__btn--light:hover {
-  color: rgb(210, 99, 222);
-}
-
-.icone__heart--light {
-  color: #7e7e7e;
+.btn__light--grey {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 72px;
 }
 
 @media (max-width: 768px) {
@@ -159,13 +154,43 @@ main {
 
 .section__btn--light {
   height: 272px;
+  padding-top: 2px;
 }
 
 .bloc__btn--light {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 27px;
+}
+.bloc__btn--light div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 85%;
+}
+.bloc__btn--light div span {
+  position: relative;
+  left: 19.25px;
+}
+
+.circle__number {
+  padding: 10px 14px;
+  border-radius: 50%;
+  background: rgb(210, 99, 222);
+  color: white;
+}
+
+.icone__btn--light {
+  color: #7e7e7e;
+  font-size: 16px;
+}
+.icone__btn--light:hover {
+  color: rgb(210, 99, 222);
+}
+
+.icone__heart--light {
+  color: #7e7e7e;
 }
 
 .section__card--menu {
@@ -221,7 +246,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: start;
-  row-gap: 5px;
+  row-gap: 10px;
   background: #353535;
   padding: 22px 20px;
   width: 100%;

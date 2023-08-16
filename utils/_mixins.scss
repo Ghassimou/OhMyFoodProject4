@@ -43,3 +43,18 @@
 @mixin color-font($color, $valeur) {
   #{$color}: $valeur;
 }
+
+// test button
+@mixin btn-2sideRadius($color, $valeur, $border-radius: 20px, $border: none) {
+  #{$color}: $valeur;
+  border-radius: $border-radius;
+  border: $border;
+}
+
+@mixin padding($padding, $valeur) {
+  @extend %btn;
+  #{padding-top}: $valeur;
+  #{padding-bottom}: $valeur;
+  #{padding-left}: $valeur;
+  #{padding-right}: $valeur;
+}

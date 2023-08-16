@@ -1,7 +1,7 @@
 //
 .footer__link--grey {
     @include flex-cross(start);
-    row-gap: 5px;
+    row-gap: 10px;
     @include color-font(background, $font-grey);
     padding: 22px 20px;
     width: 100%;
