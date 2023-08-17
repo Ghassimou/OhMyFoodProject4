@@ -1,74 +1,59 @@
 main{
   width: 100%;
 }
-.section__headLiner {
+//Tête d'affiche de la page
+.section__heading{
   @include flex-cross;
-  @include flex-conten(center);
+  @include flex-conten(space-evenly);
   @include color-font(background, $lighten-grey);
   width: 100%;
-  height: 354px;
+  height: 286px;
   h1{
     @include style-font("RobotoBold", 24px);
-    padding-bottom: 20px;
   }
   p{
     @include style-font("RobotoLight", 18px);
-    padding-bottom: 30px;
   }
 }
-
-.section__title {
-  @include style-font("RobotoBold", 24px, left);
-  @include color-font(background, $lighten-grey);
-  padding-bottom: 20px;
+.section__btn{
+  height: 440px;
+  @include flex-cross(unset);
+  @include flex-conten(space-evenly);
+  h2{
+    @include style-font("RobotoBold", 24px, left);
+  }
 }
-
-.section__btn--light {
-  height: 272px;
-  padding-top: 2px;
-}
-
-.bloc__btn--light{
+//Le container des buttons et le cercle numeron inter
+.bloc__btn{
   @include flex-cross(center);
-  gap: 27px;
-  div{
+  gap: 26px;
+  .contain__btn{
     @include flex-main(center);
     width: 85%;
-    span{
-      position: relative;
-      left: 19.25px;
-    }
+    position: relative;
+  }
+  .circle__num{
+    padding: 10px 14px;
+    border-radius: 50%;
+    @include color-font(background, $primary-font-purple);
+    @include color-font(color, white);
+    position: absolute;
+    left: -17px;
   }
 }
-//Circle number
-.circle__number {
-  padding: 10px 14px;
-  border-radius: 50%;
-  @include color-font(background, $linear-purple);
-  @include color-font(color, white);
-}
-.icone__btn--light {
-  @include color-font(color, $light-grey);
-  font-size: 16px;
-
-  &:hover {
-    color: ($linear-purple);
-  }
-}
-.icone__heart--light {
-  @include color-font(color, $light-grey);
-}
-
 //Section Cards style
-.section__card--menu{
+.section__menu{
   @include flex-cross(unset);
   @include color-font(background, $lighten-grey);
+  h2{
+    @include style-font("RobotoBold", 24px, left);
+  }
 }
-
-.bloc__card--menu {
+.bloc__menu {
   @include flex-cross(center);
   .link__clic{
     width: 91%;
+    position: relative;
   }
   img{
     object-fit: cover;
@@ -77,18 +62,28 @@ main{
   }
 }
 
-.new__bg-green {
+.square__new{
   @include color-font(background, $tertiaire-light-green);
   @include color-font(color, $tertiaire-font-green);
   @include style-font("RobotoMedium", 14px, center);
+  position: absolute;
+  right: 0;
+  top: 2px;
 }
-.card-content{
-  @include flex-cross(start);
+.card-txt{
   @include color-font(color, black);
 }
 .card-title{
   @include style-font("RobotoBolt", 18px,start);
+  @include flex-main(center);
+  @include flex-conten(space-between);
+  .icone__heart{
+    @include color-font(color, $primary-font-purple);
+  }
 }
 .card-subtitle{
   @include style-font("RobotoLignt", 17px,start);
 }
+
+
+

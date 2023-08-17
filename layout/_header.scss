@@ -1,23 +1,25 @@
-//Media queries header
+//Media queries fist mobile
 body{ 
   @include breakpoints("mobile"){
-    @include flex-cross(center);
+  @include flex-cross(center);
   }
 }
-//header layout
-.header__nav {
+//header container
+.header{
     @include flex-cross(center);
+    width: 100%;
     height: 63px;
     padding: 15px;
 }
 //style logo color black
-.logo__link--black{
+.header__logo{
     @include color-font(color, black);
-    @include style-font();
+    @include style-font;
 }
 //style navigation icone
-.nav__list--grey {
+.nav__icone-txt{
   @include color-font(background, $bg-nav);
+  @include nav__shadow;
   width: 100%;
   li{
     @include color-font(color, $font-grey);

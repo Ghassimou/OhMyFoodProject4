@@ -1,11 +1,11 @@
-//
-.footer__link--grey {
+//Le footer avec sont logo blanc et des icones en liens
+.footer__link{
     @include flex-cross(start);
     row-gap: 10px;
     @include color-font(background, $font-grey);
     padding: 22px 20px;
     width: 100%;
-  .logo__link--white {
+  .footer__logo {
     @include style-font("Shrikhand",18px,start);
   }
   a {
@@ -16,7 +16,3 @@
     padding-right: 10px;
   }
 }
-
-//a {
-//color: darken($white,20%);// test color darken
-//}

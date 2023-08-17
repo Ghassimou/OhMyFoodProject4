@@ -36,25 +36,22 @@ li {
   list-style: none;
 }
 
-.btn__light--grey, .btn-purple {
-  border: none;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+.btn--grey, .btn-purple {
   color: black;
   border-radius: 20px;
   border: none;
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: center;
-}
-.btn__light--grey:hover, .btn-purple:hover {
-  background: #003a68;
+  border: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .btn-purple {
-  background: rgb(210, 99, 222);
+  background: #9356dc;
   color: #fff;
   border-radius: 30px;
   border: none;
@@ -67,13 +64,32 @@ li {
   background: #003a68;
 }
 
-.btn__light--grey {
+.btn--grey {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  background: #f7f7f7;
+  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
   width: 100%;
   height: 72px;
+  padding-left: 19px;
+}
+.btn--grey:hover {
+  background: #353535;
+}
+.btn--grey .icone--grey {
+  color: #7e7e7e;
+  font-size: 16px;
+}
+.btn--grey .icone--grey:hover {
+  color: rgb(210, 99, 222);
+}
+.btn--grey .fa-mobile-screen-button {
+  padding-left: 15px;
+}
+.btn--grey .span--padding-left {
+  padding-left: 14px;
 }
 
 @media (max-width: 768px) {
@@ -84,26 +100,28 @@ li {
   }
 }
 
-.header__nav {
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   height: 63px;
   padding: 15px;
 }
 
-.logo__link--black {
+.header__logo {
   color: black;
   font-family: "Shrikhand";
   font-size: 30px;
   text-align: center;
 }
 
-.nav__list--grey {
+.nav__icone-txt {
   background: #EAEAEA;
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
   width: 100%;
 }
-.nav__list--grey li {
+.nav__icone-txt li {
   color: #353535;
   display: flex;
   flex-direction: row;
@@ -112,7 +130,7 @@ li {
   height: 50px;
   gap: 29px;
 }
-.nav__list--grey span {
+.nav__icone-txt span {
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: center;
@@ -122,111 +140,101 @@ main {
   width: 100%;
 }
 
-.section__headLiner {
+.section__heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: #f7f7f7;
   width: 100%;
-  height: 354px;
+  height: 286px;
 }
-.section__headLiner h1 {
+.section__heading h1 {
   font-family: "RobotoBold";
   font-size: 24px;
   text-align: center;
-  padding-bottom: 20px;
 }
-.section__headLiner p {
+.section__heading p {
   font-family: "RobotoLight";
   font-size: 18px;
   text-align: center;
-  padding-bottom: 30px;
 }
 
-.section__title {
+.section__btn {
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: space-evenly;
+}
+.section__btn h2 {
   font-family: "RobotoBold";
   font-size: 24px;
   text-align: left;
-  background: #f7f7f7;
-  padding-bottom: 20px;
 }
 
-.section__btn--light {
-  height: 272px;
-  padding-top: 2px;
-}
-
-.bloc__btn--light {
+.bloc__btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 27px;
+  gap: 26px;
 }
-.bloc__btn--light div {
+.bloc__btn .contain__btn {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 85%;
-}
-.bloc__btn--light div span {
   position: relative;
-  left: 19.25px;
 }
-
-.circle__number {
+.bloc__btn .circle__num {
   padding: 10px 14px;
   border-radius: 50%;
-  background: rgb(210, 99, 222);
+  background: #9356dc;
   color: white;
+  position: absolute;
+  left: -17px;
 }
 
-.icone__btn--light {
-  color: #7e7e7e;
-  font-size: 16px;
-}
-.icone__btn--light:hover {
-  color: rgb(210, 99, 222);
-}
-
-.icone__heart--light {
-  color: #7e7e7e;
-}
-
-.section__card--menu {
+.section__menu {
   display: flex;
   flex-direction: column;
   align-items: unset;
   background: #f7f7f7;
 }
+.section__menu h2 {
+  font-family: "RobotoBold";
+  font-size: 24px;
+  text-align: left;
+}
 
-.bloc__card--menu {
+.bloc__menu {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.bloc__card--menu .link__clic {
+.bloc__menu .link__clic {
   width: 91%;
+  position: relative;
 }
-.bloc__card--menu img {
+.bloc__menu img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 174px;
 }
 
-.new__bg-green {
+.square__new {
   background: #99e2d0;
   color: #008766;
   font-family: "RobotoMedium";
   font-size: 14px;
   text-align: center;
+  position: absolute;
+  right: 0;
+  top: 2px;
 }
 
-.card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+.card-txt {
   color: black;
 }
 
@@ -234,6 +242,13 @@ main {
   font-family: "RobotoBolt";
   font-size: 18px;
   text-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-title .icone__heart {
+  color: #9356dc;
 }
 
 .card-subtitle {
@@ -242,7 +257,7 @@ main {
   text-align: start;
 }
 
-.footer__link--grey {
+.footer__link {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -251,17 +266,17 @@ main {
   padding: 22px 20px;
   width: 100%;
 }
-.footer__link--grey .logo__link--white {
+.footer__link .footer__logo {
   font-family: "Shrikhand";
   font-size: 18px;
   text-align: start;
 }
-.footer__link--grey a {
+.footer__link a {
   color: #fff;
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: start;
 }
-.footer__link--grey i {
+.footer__link i {
   padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */

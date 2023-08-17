@@ -46,7 +46,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -57,10 +56,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header__nav">
-      <a class="logo__link--black" href="#">ohmyfood</a>
+    <header class="header">
+      <a class="header__logo" href="#">ohmyfood</a>
     </header>
-    <nav class="nav__list--grey">
+    <nav class="nav__icone-txt">
       <ul>
         <li>
           <i class="fa-solid fa-location-dot"></i>
@@ -69,127 +68,117 @@
       </ul>
     </nav>
     <main>
-      <section class="section__headLiner">
-        <h1>
-          Résevez le menu qui vous convient
-        </h1>
+      <section class="section__heading">
+        <h1>Résevez le menu qui vous convient</h1>
         <p>
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
         <button class="btn-purple">Explorez nos restaurants</button>
       </section>
-      <h2 class="section__title">Fonctionnement</h2>
-      <section class="section__btn--light">
-        <article class="bloc__btn--light">
-          <div>
-            <span class="circle__number">1</span>
-            <button class="btn__light--grey"> <i class="fa-solid icone__btn--light fa-mobile-screen-button"></i>
-            <span>
-              Choisissez un restaurant
-            </span>
-            </button>
-          </div>
-
-          <div>
-            <span class="circle__number">2</span>
-            <button class="btn__light--grey"><i class="fa-solid icone__btn--light fa-list"></i>
-              <span>
-                Composez votre menu
+      <section class="section__btn">
+        <h2>Fonctionnement</h2>
+        <article class="bloc__btn">
+          <div class="contain__btn">
+            <span class="circle__num">1</span>
+            <button class="btn--grey">
+              <i class="icone--grey fa-solid fa-mobile-screen-button"></i>
+              <span class="text__btn--light span--padding-left">
+                Choisissez un restaurant
               </span>
             </button>
           </div>
-
-          <div>
-            <span class="circle__number">3</span>
-
-            <button class="btn__light--grey"><i class="fa-solid icone__btn--light fa-store"></i>
-              <span>
-                Dégustez au restaurant
-              </span>
+          <div class="contain__btn">
+            <span class="circle__num">2</span>
+            <button class="btn--grey">
+              <i class="icone--grey fa-solid fa-list"></i>
+              <span> Composez votre menu </span>
+            </button>
+          </div>
+          <div class="contain__btn">
+            <span class="circle__num">3</span>
+            <button class="btn--grey">
+              <i class="icone--grey fa-solid fa-store"></i>
+              <span> Dégustez au restaurant </span>
             </button>
           </div>
         </article>
       </section>
-      <section class="section__card--menu">
-        <h2 class="section__title">Restaurants</h2>
-        <article class="bloc__card--menu">
+      <section class="section__menu">
+        <h2>Restaurants</h2>
+        <article class="bloc__menu">
           <a class="link__clic" href="#">
-            <span class="new__bg-green">Nouveau</span>
+            <span class="square__new">Nouveau</span>
             <img
               src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
               alt="Image d'un plat à déguster"
             />
-            <div class="card-content">
-              <div class="card-txt">
-                <h3 class="card-title">La palette du goût</h3>
-                <p class="card-subtitle">
-                  Menilmontant<i
-                    class="fa-solid icone__heart--light fa-heart"
-                  ></i>
-                </p>
-              </div>
+
+            <div class="card-txt">
+              <h3 class="card-title">
+                La palette du goût
+                <i class="fa-solid icone__heart fa-heart"></i>
+              </h3>
+
+              <p class="card-subtitle">Menilmontant</p>
             </div>
           </a>
         </article>
-        <article class="bloc__card--menu">
+        <article class="bloc__menu">
           <a class="link__clic" href="#">
-            <span class="new__bg-green">Nouveau</span>
+            <span class="square__new">Nouveau</span>
             <img
               src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
               alt="Image d'un plat à déguster"
             />
-            <div class="card-content">
-              <div class="card-txt">
-                <h3 class="card-title">La note enchantée</h3>
-                <p class="card-subtitle">
-                  Charonne<i class="fa-solid icone__heart--light fa-heart"></i>
-                </p>
-              </div>
+
+            <div class="card-txt">
+              <h3 class="card-title">
+                La note enchantée
+                <i class="fa-solid icone__heart fa-heart"></i>
+              </h3>
+              <p class="card-subtitle">Charonne</p>
             </div>
           </a>
         </article>
-        <article class="bloc__card--menu">
+        <article class="bloc__menu">
           <a class="link__clic" href="#">
-            <span class="new__bg-green">Nouveau</span>
+            <span class="square__new">Nouveau</span>
             <img
               src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
               alt="Image d'un plat à déguster"
             />
-            <div class="card-content">
-              <div class="card-txt">
-                <h3 class="card-title">A la française</h3>
-                <p class="card-subtitle">
-                  Cité Rouge<i
-                    class="fa-solid icone__heart--light fa-heart"
-                  ></i>
-                </p>
-              </div>
+
+            <div class="card-txt">
+              <h3 class="card-title">
+                A la française
+                <i class="fa-solid icone__heart fa-heart"></i>
+              </h3>
+              <p class="card-subtitle">Cité Rouge</p>
             </div>
           </a>
         </article>
-        <article class="bloc__card--menu">
+        <article class="bloc__menu">
           <a class="link__clic" href="#">
-            <span class="new__bg-green">Nouveau</span>
+            <span class="square__new">Nouveau</span>
             <img
               src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
               alt="Image d'un plat à déguster"
             />
-            <div class="card-content">
-              <div class="card-txt">
-                <h3 class="card-title">Le délice des sens</h3>
-                <p class="card-subtitle">
-                  Folie-Méricourt<i
-                    class="fa-solid icone__heart--light fa-heart"
-                  ></i>
-                </p>
-              </div>
+
+            <div class="card-txt">
+              <h3 class="card-title">
+                Le délice des sens<i
+                  class="fa-solid icone__heart fa-heart"
+                ></i>
+              </h3>
+              <p class="card-subtitle">Folie-Méricourt</p>
             </div>
           </a>
         </article>
       </section>
     </main>
-    <footer class="footer__link--grey">
-      <a class="logo__link--white" href="#">ohmyfood</a>
+    <footer class="footer__link">
+      <a class="footer__logo" href="#">ohmyfood</a>
       <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
       <a href="#"><i class="fa-solid fa-handshake"></i>Devenir un partenaire</a>
       <a href="#">Mentions légales</a>

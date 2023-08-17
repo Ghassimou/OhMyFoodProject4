@@ -1,31 +1,49 @@
-%btn{
+//Les propietés des boutons gris
+%btn {
+  @include btn-2sideRadius(color, black);
+  @include style-font("RobotoMedium", 16px);
   border: none;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  @include btn-2sideRadius(color,black);
-  @include style-font("RobotoMedium",16px);
-  &:hover {
-    background: ($font-blue);
-  }
 }
+//Le bouton couleur rose headliner
 .btn-purple {
-  //@include style-font("RobotoMedium",16px);
-  @include color-font(background,$linear-purple);
-  @include btn-2sideRadius(color,$white,30px);
-  @include padding(padding,20px);
+  @include color-font(background, $primary-font-purple);
+  @include btn-2sideRadius(color, $white, 30px);
+  @include padding(padding, 20px);
+
   &:hover {
     background: ($font-blue);
   }
 }
-.btn__light--grey {
+//Les boutons couleur grises
+.btn--grey {
   @include flex-main;
   @include flex-conten(space-evenly);
+  @include color-font(background, $lighten-grey); 
+  @include btn__shadow;
   @extend %btn;
   width: 100%;
   height: 72px;
+  padding-left: 19px;
+
+  &:hover {
+    background: ($font-grey);
+  }
+
+  & .icone--grey {
+    @include color-font(color, $light-grey);
+    font-size: 16px;
+    &:hover {
+      color: ($linear-purple);
+    }
+  }
+  .fa-mobile-screen-button {
+    padding-left: 15px;
+  }
+  .span--padding-left {
+    padding-left: 14px;
+  }
 }
-
-
-
