@@ -55,7 +55,7 @@ main{
     width: 91%;
     position: relative;
   }
-  img{
+  .img__plate{
     object-fit: cover;
     width: 100%;
     height: 174px;
@@ -77,13 +77,44 @@ main{
   @include style-font("RobotoBolt", 18px,start);
   @include flex-main(center);
   @include flex-conten(space-between);
-  .icone__heart{
-    @include color-font(color, $primary-font-purple);
-  }
+  
 }
 .card-subtitle{
   @include style-font("RobotoLignt", 17px,start);
 }
 
+ 
+//code openclasseroom*********************************
+//animation coeur a copier ********************
 
 
+.heart-like{
+  position: relative;
+
+  .empty-heart{
+    width: 16px;
+    height: 17px;
+    position: absolute;
+  }
+
+  .filled-heart{
+    position: absolute;
+    left: 0;
+    top: O;
+    color: black;
+    opacity: 0;
+  
+    transition: color .5ms;
+    transition: opacity 1000ms;
+    &:active{
+      opacity: 1;
+      color: purple;
+    
+    }
+  }
+
+}
+
+
+
+//*********************************************

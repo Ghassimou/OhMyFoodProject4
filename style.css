@@ -51,7 +51,6 @@ li {
 }
 
 .btn-purple {
-  background: #9356dc;
   color: #fff;
   border-radius: 30px;
   border: none;
@@ -59,6 +58,8 @@ li {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  color: linear-gradient(#9356dc, #ff79da);
+  background: linear-gradient(#9356dc, #ff79da);
 }
 .btn-purple:hover {
   background: #003a68;
@@ -216,7 +217,7 @@ main {
   width: 91%;
   position: relative;
 }
-.bloc__menu img {
+.bloc__menu .img__plate {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -247,14 +248,33 @@ main {
   align-items: center;
   justify-content: space-between;
 }
-.card-title .icone__heart {
-  color: #9356dc;
-}
 
 .card-subtitle {
   font-family: "RobotoLignt";
   font-size: 17px;
   text-align: start;
+}
+
+.heart-like {
+  position: relative;
+}
+.heart-like .empty-heart {
+  width: 16px;
+  height: 17px;
+  position: absolute;
+}
+.heart-like .filled-heart {
+  position: absolute;
+  left: 0;
+  top: O;
+  color: black;
+  opacity: 0;
+  transition: color 0.5ms;
+  transition: opacity 1000ms;
+}
+.heart-like .filled-heart:active {
+  opacity: 1;
+  color: purple;
 }
 
 .footer__link {
