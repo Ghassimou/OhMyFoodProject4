@@ -1,17 +1,28 @@
-//Responsive only-screen
-@mixin breakpoints($screen) {
-  @if $screen == "mobile" {
-    @media (max-width: 768px) {
-      @content;
-    }
-  } @else if $screen == "tablete" {
-    @media (max-width: 1024px) {
-      @content;
-    }
-  } @else if $screen == "desktop" {
-    @media (max-width: 1440px) {
-      @content;
-    }
+//Responsive only-screen(mobile, tablet, desktop
+@mixin mobS {
+  @media (min-width: map-get($breakpoints,"mobile")) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: map-get($breakpoints,"tablete")) {
+    @content;
+  }
+}
+@mixin desk {
+  @media (min-width: map-get($breakpoints,"desktop")) {
+    @content;
+  }
+}
+@mixin deskL {
+  @media (min-width: map-get($breakpoints,"desktopL")) {
+    @content;
+  }
+}
+@mixin breakpoint($screen: 0) {
+  @media (min-width: $screen) {
+    @content;
   }
 }
 //align the flexible cross-axis
@@ -51,6 +62,14 @@
   border: $border;
 }
 
+//test mix************
+@mixin btn-2sideRadius2($border, $valeur, $border-radius: 20px) {
+  #{$border}: $valeur;
+  border-radius: $border-radius;
+}
+
+//*****************
+
 @mixin padding($padding, $valeur) {
   @extend %btn;
   #{padding-top}: $valeur;
@@ -60,13 +79,15 @@
 }
 
 //Boxe shadow nav
-@mixin nav__shadow{
-  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+@mixin nav__shadow {
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
 }
 
-@mixin btn__shadow{
-  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+@mixin btn__shadow {
+  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+    5px 5px 9px rgba(94, 104, 121, 0.3);
 }
-@mixin linearGradient($background,$valeur1,$valeur2){
-  #{$background}: linear-gradient($valeur1,$valeur2);
+@mixin linearGradient($background, $valeur1, $valeur2) {
+  #{$background}: linear-gradient($valeur1, $valeur2);
 }

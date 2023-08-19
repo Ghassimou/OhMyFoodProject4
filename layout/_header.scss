@@ -1,35 +1,46 @@
-//Media queries fist mobile
-body{ 
-  @include breakpoints("mobile"){
-  @include flex-cross(center);
+body {
+  @include mobS {
+    @include flex-cross(center);
+  }
+
+  @include tab {
+    background-color: blue;
+    @include flex-cross(center);
+    @include flex-conten(center); 
+  }
+  @include desk {
+    background-color: green;
+  }
+  @include deskL {
+    background-color: yellow;
   }
 }
 //header container
-.header{
-    @include flex-cross(center);
-    width: 100%;
-    height: 63px;
-    padding: 15px;
+.header {
+  @include flex-cross(center);
+  width: 100%;
+  height: 63px;
+  padding: 15px;
 }
+
 //style logo color black
-.header__logo{
-    @include color-font(color, black);
-    @include style-font;
+.header__logo {
+  @include color-font(color, black);
+  @include style-font;
 }
 //style navigation icone
-.nav__icone-txt{
+.nav__icone-txt {
   @include color-font(background, $bg-nav);
   @include nav__shadow;
   width: 100%;
-  li{
+  li {
     @include color-font(color, $font-grey);
     @include flex-main(center);
     @include flex-conten(center);
-    height:50px;
+    height: 50px;
     gap: 29px;
   }
-  span{
-    @include style-font("RobotoMedium",16px);
+  span {
+    @include style-font("RobotoMedium", 16px);
   }
 }
-

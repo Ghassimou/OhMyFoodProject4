@@ -10,16 +10,13 @@
 }
 //Le bouton couleur rose headliner
 .btn-purple {
- 
   //@include color-font(background, $primary-font-purple);
   @include btn-2sideRadius(color, $white, 30px);
   @include padding(padding, 20px);
-  @include linearGradient(color,#9356dc,#ff79da);
-  background: linear-gradient(#9356dc,#ff79da);
-
-
+  @include linearGradient(background,#ff79da,#9356dc,);
   &:hover {
-    background: ($font-blue);
+    background: ($background-image);
+    opacity: .9;
   }
 }
 //Les boutons couleur grises
@@ -39,7 +36,7 @@
 
   & .icone--grey {
     @include color-font(color, $light-grey);
-    font-size: 16px;
+    font-size: 21px;
     &:hover {
       color: ($linear-purple);
     }
