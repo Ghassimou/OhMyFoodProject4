@@ -1,17 +1,17 @@
 //Import file base
-@import 'base/base';
-@import 'base/reset';
+@import "base/base";
+@import "base/reset";
 
 // Import file utils
-@import 'utils/variables';
-@import 'utils/mixins';
+@import "utils/variables";
+@import "utils/mixins";
 
 //Import file components
-@import 'components/button';
+@import "components/button";
 //@import 'components/loader';
 //@import 'components/meal-card';
 
 //@Import file layout
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/footer';
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";

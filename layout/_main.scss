@@ -4,62 +4,76 @@ main {
   h2 {
     @include style-font("RobotoBold", 24px, left);
     padding: 46px 0 26px;
-  }
-}
-//Tête d'affiche de la page
-.section__heading {
-  @include tab {
-    height: 239px;
-    padding: 30px 0;
-
-    .heading {
-      height: 179px;
-
-      @include flex-cross;
-      @include flex-conten(center);
-      row-gap: 18px;
+    //responsive tablete and desktop
+    @include desk {
+      @include tab;
+      padding: 25px 0;
     }
   }
 }
-
+//Tête d'affiche tablet and desktop
+.section__heading {
+  @include desk {
+    @include tab;
+    height: 239px;
+    padding: 30px 0;
+  }
+}
+//Tête d'affiche mobile
 .heading {
   width: 100%;
   height: 286px;
-
   @include flex-cross;
   @include flex-conten(space-evenly);
   @include color-font(background, $lighten-grey);
-
   h1 {
     @include style-font("RobotoBold", 24px);
   }
   p {
     @include style-font("RobotoLight", 18px);
   }
+  //Responsive tablete and desktop
+  @include desk {
+    @include tab;
+    height: 179px;
+    @include flex-cross;
+    @include flex-conten(center);
+    row-gap: 18px;
+  }
 }
 
 .section__btn {
   height: 440px;
-
   @include flex-cross(unset);
-}
 
-//Le container des buttons et le cercle numeron inter
-.bloc__btn {
-  @include flex-cross(center);
-  gap: 26px;
-  .contain__btn {
-    @include flex-main(center);
-    width: 85%;
-    position: relative;
+  .bloc__btn {
+    @include flex-cross(center);
+    gap: 26px;
+    .contain__btn {
+      width: 85%;
+      position: relative;
+      @include flex-main(center);
+    }
+    .circle__num {
+      position: absolute;
+      transform: translate(-47%, 4%);
+      @include color-font(background, $primary-font-purple);
+      @include color-font(color, white);
+      padding: 3px 8px;
+      border-radius: 50%;
+    }
   }
-  .circle__num {
-    padding: 3px 8px;
-    border-radius: 50%;
-    @include color-font(background, $primary-font-purple);
-    @include color-font(color, white);
-    position: absolute;
-    transform: translate(-47%, 4%);
+  //Responsive tablete and desktop
+
+  @include tab {
+    @include desk;
+    height: 228.38px;
+    display: block;
+    padding: 50px 0;
+    .bloc__btn {
+      @include flex-main(center);
+      gap: 25px;
+    }
   }
 }
 //Section Cards style
@@ -76,15 +90,20 @@ main {
     position: relative;
   }
   .img__plate {
-    object-fit: cover;
     width: 100%;
     height: 174px;
+    object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
 }
 
 .square__new {
+  width: 80px;
+  height: 29px;
+  position: absolute;
+  right: 0;
+  transform: translate(-20%, 45%);
   @include flex-main;
   @include flex-conten(center);
   @include color-font(background, $tertiaire-light-green);
@@ -94,11 +113,6 @@ main {
   border-top-right-radius: 2px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
-  position: absolute;
-  right: 0;
-  transform: translate(-20%, 45%);
-  width: 80px;
-  height: 29px;
 }
 .card-containt {
   @include flex-main(center);
@@ -107,13 +121,15 @@ main {
   padding: 12px 35px 12px 15px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+
   .card-txt {
     @include color-font(color, black);
   }
+
   .card-title {
-    @include style-font("RobotoBold", 18px, start);
     @include flex-main(center);
     @include flex-conten(space-between);
+    @include style-font("RobotoBold", 18px, start);
   }
   .card-subtitle {
     @include style-font("RobotoLight", 17px, start);
@@ -134,6 +150,7 @@ main {
       position: absolute;
       opacity: 0;
       transition: opacity 400ms;
+
       &:hover {
         opacity: 1;
         color: $heart-color;

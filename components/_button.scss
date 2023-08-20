@@ -13,17 +13,17 @@
   //@include color-font(background, $primary-font-purple);
   @include btn-2sideRadius(color, $white, 30px);
   @include padding(padding, 20px);
-  @include linearGradient(background,#ff79da,#9356dc,);
+  @include linearGradient(background, #ff79da, #9356dc);
   &:hover {
     background: ($background-image);
-    opacity: .9;
+    opacity: 0.9;
   }
 }
 //Les boutons couleur grises
 .btn--grey {
   @include flex-main;
   @include flex-conten(space-evenly);
-  @include color-font(background, $lighten-grey); 
+  @include color-font(background, $lighten-grey);
   @include btn__shadow;
   @extend %btn;
   width: 100%;

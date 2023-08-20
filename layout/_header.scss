@@ -4,14 +4,17 @@ body {
   }
 
   @include tab {
+    padding: 0 180px;
     background-color: blue;
     @include flex-cross(center);
-    @include flex-conten(center); 
+    @include flex-conten(center);
   }
   @include desk {
+    padding: 0 180px;
     background-color: green;
   }
   @include deskL {
+    padding: 0 180px;
     background-color: yellow;
   }
 }

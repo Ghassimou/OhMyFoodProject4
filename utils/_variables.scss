@@ -15,19 +15,24 @@ $secondary-light-pink: #ff79da;
 $tertiaire-font-green: #008766;
 $tertiaire-light-green: #99e2d0;
 
-//Var seconde color 
+//Var seconde color
 $font-grey: #353535;
 $light-grey: #7e7e7e;
 $font-blue: #003a68;
 $light-blue: #89c8fa;
 $white: #fff;
-$bg-nav:#EAEAEA;
-$bg-btn-light:#F6F6F6;
+$bg-nav: #eaeaea;
+$bg-btn-light: #f6f6f6;
 
 $lighten-grey: lighten($font-grey, 76%);
 $linear-purple: (rgba(210, 99, 222, 100));
-$heart-color:#9356dc;
+$heart-color: #9356dc;
 
-$background-image: linear-gradient(to right top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-
-
+$background-image: linear-gradient(
+  to right top,
+  #9356dc,
+  #b35cdc,
+  #cf64dc,
+  #e86edb,
+  #ff79da
+);
