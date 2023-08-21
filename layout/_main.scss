@@ -1,40 +1,41 @@
 main {
   width: 100%;
-
   h2 {
-    @include style-font("RobotoBold", 24px, left);
     padding: 46px 0 26px;
-    //responsive tablete and desktop
-    @include desk {
-      @include tab;
-      padding: 25px 0;
+    @include style-font("RobotoBold", 24px, left);
+    //all responsive screen >= tablet
+    @include tablet {
+      padding: 30px 0 28px 19px;
     }
   }
 }
-//Tête d'affiche tablet and desktop
+
+//all responsive screen >= tablet
 .section__heading {
-  @include desk {
-    @include tab;
+  @include tablet {
     height: 239px;
-    padding: 30px 0;
+    padding: 30px 0 12px 0;
   }
 }
-//Tête d'affiche mobile
+
 .heading {
   width: 100%;
   height: 286px;
   @include flex-cross;
   @include flex-conten(space-evenly);
   @include color-font(background, $lighten-grey);
+
   h1 {
     @include style-font("RobotoBold", 24px);
   }
+
+
   p {
     @include style-font("RobotoLight", 18px);
   }
-  //Responsive tablete and desktop
-  @include desk {
-    @include tab;
+
+  //all responsive screen >= tablet
+  @include tablet {
     height: 179px;
     @include flex-cross;
     @include flex-conten(center);
@@ -44,51 +45,73 @@ main {
 
 .section__btn {
   height: 440px;
+  padding: 20px 25px ;// revoir
+
   @include flex-cross(unset);
 
   .bloc__btn {
     @include flex-cross(center);
     gap: 26px;
+
     .contain__btn {
       width: 85%;
       position: relative;
       @include flex-main(center);
     }
+
     .circle__num {
       position: absolute;
       transform: translate(-47%, 4%);
-      @include color-font(background, $primary-font-purple);
-      @include color-font(color, white);
       padding: 3px 8px;
       border-radius: 50%;
+      @include color-font(background, $primary-font-purple);
+      @include color-font(color, white);
     }
   }
-  //Responsive tablete and desktop
 
-  @include tab {
-    @include desk;
+  //all responsive screen >= tablet
+  // a reconder breackpoint
+  @include tablet {
+    padding: 0;
+    @include desktop{
     height: 228.38px;
     display: block;
-    padding: 50px 0;
+    padding: 0 180px;
     .bloc__btn {
       @include flex-main(center);
-      gap: 25px;
+      @include flex-conten(space-between);
     }
   }
 }
+}
+
 //Section Cards style
 .section__menu {
   @include flex-cross(unset);
   @include color-font(background, $lighten-grey);
+  //all responsive screen >= tablet
+  .content__menu {
+    @include tablet {
+      //revoir l'argument
+      @include flex-main();
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .bloc__menu {
-  @include flex-cross(center);
   padding-bottom: 18px;
+  @include flex-cross(center);
+  //all responsive screen >= tablet
+  @include tablet {
+    width: 50%;
+  }
+
   .link__clic {
     width: 91%;
     position: relative;
   }
+
   .img__plate {
     width: 100%;
     height: 174px;
@@ -114,6 +137,7 @@ main {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+
 .card-containt {
   @include flex-main(center);
   @include flex-conten(space-between);
@@ -131,9 +155,11 @@ main {
     @include flex-conten(space-between);
     @include style-font("RobotoBold", 18px, start);
   }
+
   .card-subtitle {
     @include style-font("RobotoLight", 17px, start);
   }
+
   .heart-like {
     position: relative;
     padding-bottom: 15px;
@@ -146,10 +172,10 @@ main {
     }
 
     .filled-heart {
-      font-size: 24px;
       position: absolute;
       opacity: 0;
       transition: opacity 400ms;
+      font-size: 24px;
 
       &:hover {
         opacity: 1;

@@ -1,16 +1,16 @@
-//Responsive only-screen(mobile, tablet, desktop
-@mixin mobS {
+//Responsive only-screens(mobile, tablet, desktop)
+@mixin mobile {
   @media (min-width: map-get($breakpoints,"mobile")) {
     @content;
   }
 }
 
-@mixin tab {
-  @media (min-width: map-get($breakpoints,"tablete")) {
+@mixin tablet {
+  @media (min-width: map-get($breakpoints,"tablet")) {
     @content;
   }
 }
-@mixin desk {
+@mixin desktop {
   @media (min-width: map-get($breakpoints,"desktop")) {
     @content;
   }

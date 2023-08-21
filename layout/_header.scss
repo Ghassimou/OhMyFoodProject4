@@ -1,41 +1,41 @@
 body {
-  @include mobS {
-    @include flex-cross(center);
+  @include mobile {
+    @include flex-cross(center); 
   }
 
-  @include tab {
-    padding: 0 180px;
-    background-color: blue;
-    @include flex-cross(center);
-    @include flex-conten(center);
+  @include tablet {
   }
-  @include desk {
-    padding: 0 180px;
-    background-color: green;
+
+  @include desktop {
+  
   }
+
   @include deskL {
-    padding: 0 180px;
     background-color: yellow;
   }
 }
+
 //header container
 .header {
-  @include flex-cross(center);
   width: 100%;
   height: 63px;
   padding: 15px;
+  @include flex-cross(center);
 }
 
 //style logo color black
 .header__logo {
   @include color-font(color, black);
-  @include style-font;
+  @include style-font;//font-family
 }
+
 //style navigation icone
 .nav__icone-txt {
+  width: 100%;
   @include color-font(background, $bg-nav);
   @include nav__shadow;
-  width: 100%;
+  
+  
   li {
     @include color-font(color, $font-grey);
     @include flex-main(center);
@@ -43,6 +43,7 @@ body {
     height: 50px;
     gap: 29px;
   }
+
   span {
     @include style-font("RobotoMedium", 16px);
   }

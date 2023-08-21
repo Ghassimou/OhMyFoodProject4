@@ -100,36 +100,19 @@ li {
     align-items: center;
   }
 }
-@media (min-width: 768px) {
-  body {
-    padding: 0 180px;
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media (min-width: 1024px) {
-  body {
-    padding: 0 180px;
-    background-color: green;
-  }
-}
 @media (min-width: 1440px) {
   body {
-    padding: 0 180px;
     background-color: yellow;
   }
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   height: 63px;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header__logo {
@@ -140,9 +123,9 @@ li {
 }
 
 .nav__icone-txt {
+  width: 100%;
   background: #eaeaea;
   box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
-  width: 100%;
 }
 .nav__icone-txt li {
   color: #353535;
@@ -163,22 +146,24 @@ main {
   width: 100%;
 }
 main h2 {
+  padding: 46px 0 26px;
   font-family: "RobotoBold";
   font-size: 24px;
   text-align: left;
-  padding: 46px 0 26px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   main h2 {
-    padding: 25px 0;
+    padding: 30px 0 28px 19px;
   }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 768px) {
   .section__heading {
     height: 239px;
-    padding: 30px 0;
+    padding: 30px 0 12px 0;
   }
 }
+
 .heading {
   width: 100%;
   height: 286px;
@@ -198,7 +183,7 @@ main h2 {
   font-size: 18px;
   text-align: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .heading {
     height: 179px;
     display: flex;
@@ -208,8 +193,10 @@ main h2 {
     row-gap: 18px;
   }
 }
+
 .section__btn {
   height: 440px;
+  padding: 20px 25px;
   display: flex;
   flex-direction: column;
   align-items: unset;
@@ -230,36 +217,55 @@ main h2 {
 .section__btn .bloc__btn .circle__num {
   position: absolute;
   transform: translate(-47%, 4%);
-  background: #9356dc;
-  color: white;
   padding: 3px 8px;
   border-radius: 50%;
+  background: #9356dc;
+  color: white;
 }
 @media (min-width: 768px) {
   .section__btn {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .section__btn {
     height: 228.38px;
     display: block;
-    padding: 50px 0;
+    padding: 0 180px;
   }
   .section__btn .bloc__btn {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 25px;
+    justify-content: space-between;
   }
 }
+
 .section__menu {
   display: flex;
   flex-direction: column;
   align-items: unset;
   background: #f7f7f7;
 }
+@media (min-width: 768px) {
+  .section__menu .content__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 
 .bloc__menu {
+  padding-bottom: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .bloc__menu {
+    width: 50%;
+  }
 }
 .bloc__menu .link__clic {
   width: 91%;
@@ -333,10 +339,10 @@ main h2 {
   transform: translate(-4%, -2%);
 }
 .card-containt .heart-like .filled-heart {
-  font-size: 24px;
   position: absolute;
   opacity: 0;
   transition: opacity 400ms;
+  font-size: 24px;
 }
 .card-containt .heart-like .filled-heart:hover {
   opacity: 1;
@@ -344,25 +350,55 @@ main h2 {
 }
 
 .footer__link {
+  width: 100%;
+  row-gap: 10px;
+  padding: 22px 25px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  row-gap: 10px;
   background: #353535;
-  padding: 22px 20px;
-  width: 100%;
 }
-.footer__link .footer__logo {
+@media (min-width: 768px) {
+  .footer__link {
+    flex-direction: row-reverse;
+    align-items: center;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+.footer__link .link__logo {
   font-family: "Shrikhand";
   font-size: 18px;
   text-align: start;
+  color: #fff;
 }
-.footer__link a {
+.footer__link .span__link {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+@media (min-width: 768px) {
+  .footer__link .span__link {
+    width: 660px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.footer__link .span__link a {
   color: #fff;
   font-family: "RobotoMedium";
   font-size: 16px;
   text-align: start;
 }
-.footer__link i {
+@media (min-width: 768px) {
+  .footer__link .span__link .without--icone {
+    padding-left: 30px;
+  }
+}
+.footer__link .span__link i {
   padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */
