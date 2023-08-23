@@ -1,8 +1,7 @@
 //Les propietés des boutons gris
 %btn {
-  @include btn-2sideRadius(color, black);
-  @include style-font("RobotoMedium", 16px);
-  border: none;
+  @include radius(color, black, 20px);
+  @include font-family("RobotoMedium", 16px);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -11,19 +10,19 @@
 //Le bouton couleur rose headliner
 .btn-purple {
   //@include color-font(background, $primary-font-purple);
-  @include btn-2sideRadius(color, $white, 30px);
+  @include radius(color, $white, 30px);
   @include padding(padding, 20px);
   @include linearGradient(background, #ff79da, #9356dc);
   &:hover {
-    background: ($background-image);
+    //background: ($background-image);
     opacity: 0.9;
   }
 }
 //Les boutons couleur grises
 .btn--grey {
-  @include flex-main;
-  @include flex-conten(space-evenly);
-  @include color-font(background, $lighten-grey);
+  @include flex-box(row);
+  @include flex-align(center, space-evenly);
+  @include color-bg(background, $lighten-grey);
   @include btn__shadow;
   @extend %btn;
   width: 100%;
@@ -33,9 +32,8 @@
   &:hover {
     background: ($font-grey);
   }
-
-  & .icone--grey {
-    @include color-font(color, $light-grey);
+  .icone--grey {
+    @include color-bg(color, $light-grey);
     font-size: 21px;
     &:hover {
       color: ($linear-purple);

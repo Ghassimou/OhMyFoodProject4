@@ -1,0 +1,194 @@
+main {
+  width: 100%;
+}
+//all responsive screen >= tablet
+.section__heading {
+  @include mobile {
+    width: 100%;
+    height: 287px;
+    @include padding-tb(39px, 57px);
+    @include flex-box(column);
+    @include flex-align(center);
+    row-gap: 27px;
+    @include color-bg(background, $bg-light-grey);
+    .title {
+      @include font-family("RobotoBold", 24px, center);
+    }
+    .txt {
+      @include font-family("RobotoLight", 18px, center);
+      @include color-bg(color, $font-grey);
+    }
+    //all responsive screen >= tablet
+    @include tablet {
+      height: 179px;
+      @include flex-box;
+      @include flex-align(center, unset);
+      row-gap: 18px;
+    }
+  }
+}
+.section__btn {
+  height: 440px;
+  @include padding-tb(48px, 68px);
+  @include padding-rl(20px, 20px);// ajouter plus padding a gauche
+  @include flex-box(column);
+  .title {
+    @include font-family("RobotoBold", 24px, left);
+    //all responsive screen >= tablet
+    @include tablet {
+      //test paddinf
+      @include padding-tb(30px, 28px);
+      @include padding-rl(0, 19px);
+    }
+  }
+  .article__btn {
+    @include padding-tb(26px, 0);
+    @include flex-box(column);
+    @include flex-align(center);
+    gap: 24.94px;
+
+    .content__circle__btn {
+      width: 100%;
+      position: relative;
+      @include flex-box(row);
+      @include flex-align(center);
+    }
+
+    .circle__num {
+      position: absolute;
+      transform: translate(-47%, 4%);
+      @include padding-tb(3px, 8px);
+      border-radius: 50%;
+      @include color-bg(background, $primary-font-purple);
+      @include color-bg(color, white);
+      @include font-family("RobotoMedium", 14.182px, center);
+    }
+  }
+
+  //all responsive screen >= tablet
+  // a reconder breackpoint
+  @include tablet {
+    padding: 0;
+    @include desktop {
+      height: 228.38px;
+      display: block;
+      @include padding-rl(0, 180px);
+      .bloc__btn {
+        @include flex-box(row);
+        @include flex-align(center, space-between);
+      }
+    }
+  }
+}
+
+//Section Cards style
+.section__menu {
+  @include padding-tb(54px, 66px);
+  @include padding-rl(17px, 18px);
+  @include color-bg(background, $lighten-grey);
+
+  .title__menu {
+    @include padding-tb(0, 21px);
+    @include font-family("RobotoBold", 24px, left);
+  }
+}
+.content__menu {
+  @include flex-box(column);
+  @include flex-align(center);
+  row-gap: 18px;
+
+.menu {
+  width: 100%;
+
+  .link__clic {
+    position: relative;
+  }
+
+  .img__plate {
+    width: 100%;
+    height: 174px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.square__new {
+  width: 80px;
+  height: 29px;
+  position: absolute;
+  right: 0;
+  transform: translate(-20%, 45%);
+  @include flex-box(row);
+  @include flex-align(center, center);
+  @include color-bg(background, $tertiaire-light-green);
+  @include color-bg(color, $tertiaire-font-green);
+  @include font-family("RobotoMedium", 14px, center);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.card {
+  @include flex-box(row);
+  @include flex-align(center, space-between);
+  @include color-bg(background, $white);
+  @include padding-tb(16px,12px);
+  @include padding-rl(50px, 13px);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  .txt {
+    @include color-bg(color, black);
+  }
+
+  .title {
+    @include flex-box(row);
+    @include flex-align(center, space-between);
+    @include font-family("RobotoBold", 18px, start);
+  }
+
+  .subtitle {
+    @include font-family("RobotoLight", 17px, start);
+  }
+
+  .heart-like {
+    position: relative;
+    padding-bottom: 15px;
+
+    .empty-heart {
+      width: 25.5px;
+      height: 25.5px;
+      position: absolute;
+      transform: translate(-4%, -2%);
+    }
+
+    .filled-heart {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 400ms;
+      font-size: 24px;
+
+      &:hover {
+        opacity: 1;
+        color: $heart-color;
+      }
+    }
+  }
+}
+  //all responsive screen >= tablet
+  @include tablet {
+    //revoir l'argument
+    @include flex-box(row);
+    flex-wrap: wrap;
+  }
+}
+
+
+

@@ -1,0 +1,49 @@
+body {
+  @include mobile {
+    @include flex-box(column);
+    @include flex-align(center);
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
+
+  @include deskL {
+    background-color: yellow;
+  }
+}
+
+//header container
+.header {
+  width: 100%;
+  height: 63px;
+ 
+  @include padding-tb(14px, 13px);
+  @include flex-box(column);
+}
+//style logo color black
+.logo {
+  @include color-bg(color, black);
+  @include font-family("Shrikhand",30px ); 
+}
+
+//style navigation icone
+.nav__icon-txt {
+  width: 100%;
+  @include color-bg(background, $bg-nav);
+  @include nav__shadow;
+
+  li {
+    @include color-bg(color, $font-grey);
+    @include flex-box(row);
+    @include flex-align(center, center);
+    height: 50px;
+    gap: 17px;
+  }
+
+  .txt {
+    @include font-family("RobotoMedium", 16px);
+  }
+}

@@ -1,9 +1,10 @@
 .footer__link {
   width: 100%;
   row-gap: 10px;
-  padding: 22px 25px;
+  @include padding-tb(22px, 22px);
+  @include padding-rl(25px, 25px);
   @include flex-cross(start);
-  @include color-font(background, $font-grey);
+  @include color-bg(background, $font-grey);
 
   //all responsive screen >= tablet
   @include tablet {
@@ -11,24 +12,25 @@
     align-items: center;
     column-gap: 30px;
   }
-  .link__logo {
-    @include style-font("Shrikhand", 18px, start);
-    @include color-font(color, $white);
+  .logo {
+    @include padding-tb(0, 16px);
+    @include font-family("Shrikhand", 18px, start);
+    @include color-bg(color, $white);
   }
 
   .span__link {
     @include flex-cross(start);
-    column-gap: 10px;
+    column-gap: 7px;
     //all responsive screen >= tablet
     @include tablet {
       width: 660px;
-      padding: 30px 0;
+      @include padding-tb(30px, 0);
       @include flex-main(center);
     }
 
-    a {
-      @include color-font(color, $white);
-      @include style-font("RobotoMedium", 16px, start);
+    .link {
+      @include color-bg(color, $white);
+      @include font-family("RobotoMedium", 16px, start);
     }
 
     //all responsive screen >= tablet
@@ -39,7 +41,7 @@
     }
 
     i {
-      padding-right: 10px;
+      padding-right: 11px;
     }
   }
 }

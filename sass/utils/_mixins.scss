@@ -32,50 +32,64 @@
   align-items: $align-items;
 }
 //align the flexible main-axis
-@mixin flex-main($align-items: center) {
+@mixin flex-main($align-items: center,$justify-content:unset) {
   display: flex;
   flex-direction: row;
   align-items: $align-items;
+  justify-content: $justify-content;
 }
 
-//align the flexible container's
-@mixin flex-conten($justify-content: space-around) {
+//test flex
+@mixin flex-box($flex-direction: row) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
+@mixin flex-align($align-items: center,$justify-content: unset) {
+  align-items: $align-items;
   justify-content: $justify-content;
 }
 
 //Mixins font-family with editable arguments
-@mixin style-font($font-family: "Shrikhand", $size: 30px, $text-align: center) {
+@mixin font-family($font-family: "Shrikhand", $size: null, $text-align: center) {
   font-family: $font-family;
   font-size: $size;
   text-align: $text-align;
 }
 
 //Mixins management color and background
-@mixin color-font($color, $valeur) {
+@mixin color-bg($color, $valeur) {
   #{$color}: $valeur;
 }
+//broder solid and color 
+// test 
+@mixin border($color, $valeur, $border: null) {
+  #{$color}: $valeur;
+  border: $border;
+}
 
-// test button
-@mixin btn-2sideRadius($color, $valeur, $border-radius: 20px, $border: none) {
+// Mixin border-radius
+@mixin radius($color, $valeur, $border-radius: null, $border: none) {
   #{$color}: $valeur;
   border-radius: $border-radius;
   border: $border;
 }
 
-//test mix************
-@mixin btn-2sideRadius2($border, $valeur, $border-radius: 20px) {
-  #{$border}: $valeur;
-  border-radius: $border-radius;
+// mixin paddings *****************
+@mixin padding($padding,$valeur) {
+  padding-top: $valeur;
+  padding-right: $valeur;
+  padding-bottom: $valeur;
+  padding-left: $valeur;
 }
 
-//*****************
-
-@mixin padding($padding, $valeur) {
-  @extend %btn;
-  #{padding-top}: $valeur;
-  #{padding-bottom}: $valeur;
-  #{padding-left}: $valeur;
-  #{padding-right}: $valeur;
+@mixin padding-tb($top:null, $bottom:null) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+@mixin padding-rl($right:null, $left:null) {
+  padding-right: $right;
+  padding-left: $left;
 }
 
 //Boxe shadow nav
@@ -91,3 +105,21 @@
 @mixin linearGradient($background, $valeur1, $valeur2) {
   #{$background}: linear-gradient($valeur1, $valeur2);
 }
+
+@mixin btn__shadow-purple {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin btn__gradient-purple ($border-radius: 25px){
+#{background}: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%)};
+
+//button light
+@mixin btn__shadow-grey {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);;
+}
+
+
+
+
+
+
