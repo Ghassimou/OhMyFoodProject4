@@ -10,23 +10,41 @@ body {
   @include desktop {
   }
 
-  @include deskL {
-    background-color: yellow;
-  }
+  // @include deskL {
+  //   background-color: yellow;
+  // }
 }
 
 //header container
 .header {
-  width: 100%;
-  height: 63px;
-
-  @include padding-tb(14px, 13px);
   @include flex-box(column);
+  @include flex-align(center);
 }
 //style logo color black
-.logo {
+
+.logo--txt {
+  @include tablet {
+    display: none;
+  }
+  height: 63px;
+  @include padding-tb(14px, 13px);
   @include color-bg(color, black);
   @include font-family("Shrikhand", 30px);
+}
+//medai desktop
+.logo--svg {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: block;
+    height: 96px;
+    @include padding-tb(30px, 31.8px);
+    img {
+      width: 200px;
+      height: 34.204px;
+    }
+  }
 }
 
 //style navigation icone

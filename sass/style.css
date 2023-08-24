@@ -104,26 +104,44 @@ li {
     justify-content: unset;
   }
 }
-@media (min-width: 1440px) {
-  body {
-    background-color: yellow;
-  }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
 }
 
-.header {
-  width: 100%;
+.logo--txt {
   height: 63px;
   padding-top: 14px;
   padding-bottom: 13px;
-  display: flex;
-  flex-direction: column;
-}
-
-.logo {
   color: black;
   font-family: "Shrikhand";
   font-size: 30px;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .logo--txt {
+    display: none;
+  }
+}
+
+@media (min-width: 0) {
+  .logo--svg {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .logo--svg {
+    display: block;
+    height: 96px;
+    padding-top: 30px;
+    padding-bottom: 31.8px;
+  }
+  .logo--svg img {
+    width: 200px;
+    height: 34.204px;
+  }
 }
 
 .nav__icon-txt {
@@ -175,7 +193,7 @@ main {
     color: #353535;
   }
 }
-@media (min-width: 0) and (min-width: 768px) {
+@media (min-width: 0) and (min-width: 1024px) {
   .section__heading {
     height: 179px;
     display: flex;
@@ -207,7 +225,7 @@ main {
   font-size: 24px;
   text-align: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section__btn .title {
     padding-top: 30px;
     padding-bottom: 28px;
@@ -246,12 +264,12 @@ main {
   font-size: 14.182px;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section__btn {
     padding: 0;
   }
 }
-@media (min-width: 768px) and (min-width: 1024px) {
+@media (min-width: 1024px) and (min-width: 1440px) {
   .section__btn {
     height: 228.38px;
     display: block;
@@ -302,7 +320,7 @@ main {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .content__menu .menu {
     width: 50%;
   }
@@ -377,7 +395,7 @@ main {
   opacity: 1;
   color: #9356dc;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .content__menu {
     display: flex;
     flex-direction: row;
@@ -397,7 +415,7 @@ main {
   align-items: start;
   background: #353535;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__link {
     flex-direction: row-reverse;
     align-items: center;
@@ -420,7 +438,7 @@ main {
   -moz-column-gap: 7px;
        column-gap: 7px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__link .span__link {
     width: 660px;
     padding-top: 30px;
@@ -437,7 +455,7 @@ main {
   font-size: 16px;
   text-align: start;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__link .span__link .without--icone {
     padding-left: 30px;
   }
