@@ -8,11 +8,14 @@
   border-bottom-right-radius: 20px;
 }
 //Le bouton couleur rose headliner
-.btn-purple {
-  //@include color-font(background, $primary-font-purple);
+.purple {
+  width: 100%;
+  height: 50px;
   @include radius(color, $white, 30px);
-  @include padding(padding, 20px);
-  @include linearGradient(background, #ff79da, #9356dc);
+  @include padding-tb(13px, 13px);
+  @include padding-rl(18.75px, 18.75px);
+  @include btn__gradient-purple;
+  @include font-family("RobotoMedium", 16px);
   &:hover {
     //background: ($background-image);
     opacity: 0.9;
@@ -32,7 +35,7 @@
   &:hover {
     background: ($font-grey);
   }
-  .icone--grey {
+  .icon--grey {
     @include color-bg(color, $light-grey);
     font-size: 21px;
     &:hover {
