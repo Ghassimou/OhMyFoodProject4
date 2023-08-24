@@ -32,7 +32,7 @@
   align-items: $align-items;
 }
 //align the flexible main-axis
-@mixin flex-main($align-items: center,$justify-content:unset) {
+@mixin flex-main($align-items: center, $justify-content: unset) {
   display: flex;
   flex-direction: row;
   align-items: $align-items;
@@ -45,13 +45,17 @@
   flex-direction: $flex-direction;
 }
 
-@mixin flex-align($align-items: center,$justify-content: unset) {
+@mixin flex-align($align-items: center, $justify-content: unset) {
   align-items: $align-items;
   justify-content: $justify-content;
 }
 
 //Mixins font-family with editable arguments
-@mixin font-family($font-family: "Shrikhand", $size: null, $text-align: center) {
+@mixin font-family(
+  $font-family: "Shrikhand",
+  $size: null,
+  $text-align: center
+) {
   font-family: $font-family;
   font-size: $size;
   text-align: $text-align;
@@ -61,8 +65,8 @@
 @mixin color-bg($color, $valeur) {
   #{$color}: $valeur;
 }
-//broder solid and color 
-// test 
+//broder solid and color
+// test
 @mixin border($color, $valeur, $border: null) {
   #{$color}: $valeur;
   border: $border;
@@ -76,18 +80,18 @@
 }
 
 // mixin paddings *****************
-@mixin padding($padding,$valeur) {
+@mixin padding($padding, $valeur) {
   padding-top: $valeur;
   padding-right: $valeur;
   padding-bottom: $valeur;
   padding-left: $valeur;
 }
 
-@mixin padding-tb($top:null, $bottom:null) {
+@mixin padding-tb($top: null, $bottom: null) {
   padding-top: $top;
   padding-bottom: $bottom;
 }
-@mixin padding-rl($right:null, $left:null) {
+@mixin padding-rl($right: null, $left: null) {
   padding-right: $right;
   padding-left: $left;
 }
@@ -110,16 +114,11 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-@mixin btn__gradient-purple ($border-radius: 25px){
-#{background}: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%)};
+@mixin btn__gradient-purple($border-radius: 25px) {
+  #{background}: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+}
 
 //button light
 @mixin btn__shadow-grey {
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-
-
-
-
-
-

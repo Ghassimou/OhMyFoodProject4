@@ -19,14 +19,14 @@ body {
 .header {
   width: 100%;
   height: 63px;
- 
+
   @include padding-tb(14px, 13px);
   @include flex-box(column);
 }
 //style logo color black
 .logo {
   @include color-bg(color, black);
-  @include font-family("Shrikhand",30px ); 
+  @include font-family("Shrikhand", 30px);
 }
 
 //style navigation icone
