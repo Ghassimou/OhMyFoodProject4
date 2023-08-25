@@ -1,7 +1,8 @@
 main {
   width: 100%;
 }
-//all responsive screen >= tablet
+
+//all responsive screen >= mobile
 .section__heading {
   @include mobile {
     width: 100%;
@@ -11,40 +12,33 @@ main {
     @include flex-align(center);
     row-gap: 27px;
     @include color-bg(background, $bg-light-grey);
+    
     .title {
       @include font-family("RobotoBold", 24px, center);
     }
+
     .txt {
       @include font-family("RobotoLight", 18px, center);
       @include color-bg(color, $font-grey);
     }
-    //all responsive screen >= tablet
-    @include tablet {
-      height: 179px;
-      @include flex-box;
-      @include flex-align(center, unset);
-      row-gap: 18px;
-    }
-    .content__btn {
-      width: 100%;
-      @include padding-rl(82px, 75px);
+
+    .content__btn--purple {
+      width: 218px;
     }
   }
 }
+
 .section__btn {
   height: 440px;
   @include padding-tb(48px, 68px);
   @include padding-rl(20px, 20px);
   @include flex-box(column);
+  
+
   .title {
     @include font-family("RobotoBold", 24px, left);
-    //all responsive screen >= tablet
-    @include tablet {
-      //test paddinf
-      @include padding-tb(30px, 28px);
-      @include padding-rl(0, 19px);
-    }
   }
+
   .article__btn {
     @include padding-tb(26px, 0);
     @include flex-box(column);
@@ -70,21 +64,6 @@ main {
       @include font-family("RobotoMedium", 14.182px, center);
     }
   }
-
-  //all responsive screen >= tablet
-  // a reconder breackpoint
-  @include tablet {
-    padding: 0;
-    @include desktop {
-      height: 228.38px;
-      display: block;
-      @include padding-rl(0, 180px);
-      .bloc__btn {
-        @include flex-box(row);
-        @include flex-align(center, space-between);
-      }
-    }
-  }
 }
 
 //Section Cards style
@@ -98,6 +77,7 @@ main {
     @include font-family("RobotoBold", 24px, left);
   }
 }
+
 .content__menu {
   @include flex-box(column);
   @include flex-align(center);
@@ -116,10 +96,6 @@ main {
       object-fit: cover;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-    }
-
-    @include tablet {
-      width: 50%;
     }
   }
 
@@ -187,10 +163,80 @@ main {
       }
     }
   }
-  //all responsive screen >= tablet
-  @include tablet {
-    //revoir l'argument
-    @include flex-box(row);
-    flex-wrap: wrap;
+}
+
+//all responsive screen >= tablet
+main {
+  @include desktop {
+    @include flex-box(column);
+    row-gap: 30px;
+
+    .section__heading {
+      height: 179px;
+      @include padding-tb(30px, 0);
+      @include flex-box(column);
+      @include flex-align(center, space-between);
+      row-gap: 18px;
+
+      .title {
+        @include font-family("RobotoBold", 40px, center);
+      }
+
+      .txt {
+        @include font-family("RobotoLight", 18px, center);
+        @include color-bg(color, $font-grey);
+      }
+
+      .content__btn--purple {
+        
+      }
+    }
+
+    .section__btn {
+      height: 228.38px;
+      @include padding-tb(50px, 50px);
+      @include padding-rl(180px, 180px);
+
+      .title {
+        @include padding-tb(0, 25px);
+        @include padding-rl(180px, 0);
+      }
+
+      .content__btn--grey {
+        @include flex-box(row);
+        @include flex-align(stretch, flex-start);
+        column-gap: 36.51px;
+
+        .article__btn {
+          width: 33.33%;
+          @include padding-tb(0, 0);
+          @include flex-box(row);
+          @include flex-align(center, space-between);
+        }
+      }
+    }
+
+    .section__menu {
+      @include padding-rl(180px, 180px);
+      @include padding-tb(0, 30px);
+
+      .title {
+        @include padding-tb(0, 25px);
+        @include padding-rl(180px, 0);
+      }
+
+      .content__menu {
+        @include flex-box(row);
+        flex-wrap: wrap;
+        gap: 10%;
+        row-gap: 50px;
+
+        .menu {
+          @include tablet {
+            width: 45%;
+          }
+        }
+      }
+    }
   }
 }

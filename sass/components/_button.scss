@@ -9,7 +9,7 @@
 }
 //Le bouton couleur rose headliner
 .purple {
-  width: 100%;
+  width: 218px;
   height: 50px;
   @include radius(color, $white, 30px);
   @include padding-tb(13px, 13px);
@@ -23,12 +23,13 @@
 }
 //Les boutons couleur grises
 .btn--grey {
+  width: 322.48px;
+  flex-shrink: 1;
   @include flex-box(row);
   @include flex-align(center, space-evenly);
   @include color-bg(background, $lighten-grey);
   @include btn__shadow;
   @extend %btn;
-  width: 100%;
   height: 72px;
   padding-left: 19px;
 
@@ -48,4 +49,11 @@
   .span--padding-left {
     padding-left: 14px;
   }
+}
+
+
+//all responsive screen >= tablet
+
+.purple {
+
 }
