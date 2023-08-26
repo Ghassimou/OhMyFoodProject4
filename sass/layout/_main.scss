@@ -31,7 +31,7 @@ main {
 .section__btn {
   height: 440px;
   @include padding-tb(48px, 68px);
-  @include padding-rl(20px, 0);
+  @include margin-rl(20px, 32px);
   @include flex-box(column);
 
   .title {
@@ -55,7 +55,7 @@ main {
       width: 24px;
       height: 24px;
       position: absolute;
-      @include margin-rl(0, 20px);
+      left: -12px;
       @include padding-tb(3px, 0);
       border-radius: 50%;
       @include color-bg(background, $primary-font-purple);
@@ -102,8 +102,8 @@ main {
     width: 80px;
     height: 29px;
     position: absolute;
-    right: 0;
-    transform: translate(-20%, 45%);
+    top: -148px;
+    right: 12px;
     @include flex-box(row);
     @include flex-align(center, center);
     @include color-bg(background, $tertiaire-light-green);
@@ -120,7 +120,7 @@ main {
     @include flex-align(center, space-between);
     @include color-bg(background, $white);
     @include padding-tb(16px, 12px);
-    @include padding-rl(50px, 13px);
+    @include padding-rl(0, 13px);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 
@@ -128,7 +128,7 @@ main {
       @include color-bg(color, black);
     }
 
-    .title {
+    .card--title {
       @include flex-box(row);
       @include flex-align(center, space-between);
       @include font-family("RobotoBold", 18px, start);
@@ -146,11 +146,12 @@ main {
         width: 25.5px;
         height: 25.5px;
         position: absolute;
-        transform: translate(-4%, -2%);
+        left: -50px;
       }
 
       .filled-heart {
         position: absolute;
+        left: -50px;
         opacity: 0;
         transition: opacity 400ms;
         font-size: 24px;
@@ -177,7 +178,7 @@ main {
       @include flex-align(center, space-between);
       row-gap: 18px;
 
-      .title {
+      .card--title {//revoir attention herite padding 180
         @include font-family("RobotoBold", 40px, center);
       }
 

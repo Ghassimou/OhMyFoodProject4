@@ -55,8 +55,6 @@ li {
   color: #fff;
   border-radius: 30px;
   border: none;
-  padding-top: 13px;
-  padding-bottom: 13px;
   padding-right: 18.75px;
   padding-left: 18.75px;
   background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
@@ -71,12 +69,10 @@ li {
 .btn--grey {
   flex-grow: 1;
   flex-basis: 322.48px;
-  margin-right: 0;
-  margin-left: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   background: #f7f7f7;
   box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
   height: 72.37px;
@@ -92,10 +88,16 @@ li {
   color: rgb(210, 99, 222);
 }
 .btn--grey .fa-mobile-screen-button {
-  padding-left: 15px;
+  padding-right: 27px;
+  padding-left: 22.71px;
 }
-.btn--grey .span--padding-left {
-  padding-left: 14px;
+.btn--grey .fa-list {
+  padding-right: 21px;
+  padding-left: 23.73px;
+}
+.btn--grey .fa-store {
+  padding-right: 18px;
+  padding-left: 24.73px;
 }
 
 @media (min-width: 0) {
@@ -204,8 +206,8 @@ main {
   height: 440px;
   padding-top: 48px;
   padding-bottom: 68px;
-  padding-right: 20px;
-  padding-left: 0;
+  margin-right: 20px;
+  margin-left: 32px;
   display: flex;
   flex-direction: column;
 }
@@ -235,8 +237,7 @@ main {
   width: 24px;
   height: 24px;
   position: absolute;
-  margin-right: 0;
-  margin-left: 20px;
+  left: -12px;
   padding-top: 3px;
   padding-bottom: 0;
   border-radius: 50%;
@@ -287,8 +288,8 @@ main {
   width: 80px;
   height: 29px;
   position: absolute;
-  right: 0;
-  transform: translate(-20%, 45%);
+  top: -148px;
+  right: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -311,7 +312,7 @@ main {
   background: #fff;
   padding-top: 16px;
   padding-bottom: 12px;
-  padding-right: 50px;
+  padding-right: 0;
   padding-left: 13px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -319,7 +320,7 @@ main {
 .content__menu .card .txt {
   color: black;
 }
-.content__menu .card .title {
+.content__menu .card .card--title {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -341,10 +342,11 @@ main {
   width: 25.5px;
   height: 25.5px;
   position: absolute;
-  transform: translate(-4%, -2%);
+  left: -50px;
 }
 .content__menu .card .heart-like .filled-heart {
   position: absolute;
+  left: -50px;
   opacity: 0;
   transition: opacity 400ms;
   font-size: 24px;
@@ -370,7 +372,7 @@ main {
     justify-content: space-between;
     row-gap: 18px;
   }
-  main .section__heading .title {
+  main .section__heading .card--title {
     font-family: "RobotoBold";
     font-size: 40px;
     text-align: center;

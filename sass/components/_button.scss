@@ -12,7 +12,6 @@
   width: 218px;
   height: 50px;
   @include radius(color, $white, 30px);
-  @include padding-tb(13px, 13px);
   @include padding-rl(18.75px, 18.75px);
   @include btn__gradient-purple;
   @include font-family("RobotoMedium", 16px);
@@ -25,9 +24,8 @@
 .btn--grey {
   flex-grow: 1;
   flex-basis: 322.48px;
-  @include margin-rl(0, 30px);
   @include flex-box(row);
-  @include flex-align(center, space-evenly);
+  @include flex-align(center, flex-start);
   @include color-bg(background, $lighten-grey);
   @include btn__shadow;
   @extend %btn;
@@ -44,14 +42,12 @@
     }
   }
   .fa-mobile-screen-button {
-    padding-left: 15px;
+    @include padding-rl(27px, 22.71px);
   }
-  .span--padding-left {
-    padding-left: 14px;
+  .fa-list {
+    @include padding-rl(21px, 23.73px);
   }
-}
-
-//all responsive screen >= tablet
-
-.purple {
+  .fa-store {
+    @include padding-rl(18px, 24.73px);
+  }
 }
