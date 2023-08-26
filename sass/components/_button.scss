@@ -23,15 +23,15 @@
 }
 //Les boutons couleur grises
 .btn--grey {
-  width: 322.48px;
-  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 322.48px;
+  @include margin-rl(0, 30px);
   @include flex-box(row);
   @include flex-align(center, space-evenly);
   @include color-bg(background, $lighten-grey);
   @include btn__shadow;
   @extend %btn;
-  height: 72px;
-  padding-left: 19px;
+  height: 72.37px;
 
   &:hover {
     background: ($font-grey);
@@ -51,9 +51,7 @@
   }
 }
 
-
 //all responsive screen >= tablet
 
 .purple {
-
 }

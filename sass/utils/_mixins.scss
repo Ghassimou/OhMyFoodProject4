@@ -92,6 +92,11 @@
   padding-left: $left;
 }
 
+@mixin margin-rl($right: null, $left: null) {
+  margin-right: $right;
+  margin-left: $left;
+}
+
 //Boxe shadow nav
 @mixin nav__shadow {
   box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),

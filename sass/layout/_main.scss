@@ -12,7 +12,7 @@ main {
     @include flex-align(center);
     row-gap: 27px;
     @include color-bg(background, $bg-light-grey);
-    
+
     .title {
       @include font-family("RobotoBold", 24px, center);
     }
@@ -31,9 +31,8 @@ main {
 .section__btn {
   height: 440px;
   @include padding-tb(48px, 68px);
-  @include padding-rl(20px, 20px);
+  @include padding-rl(20px, 0);
   @include flex-box(column);
-  
 
   .title {
     @include font-family("RobotoBold", 24px, left);
@@ -56,7 +55,7 @@ main {
       width: 24px;
       height: 24px;
       position: absolute;
-      transform: translate(-47%, 4%);
+      @include margin-rl(0, 20px);
       @include padding-tb(3px, 0);
       border-radius: 50%;
       @include color-bg(background, $primary-font-purple);
@@ -188,7 +187,6 @@ main {
       }
 
       .content__btn--purple {
-        
       }
     }
 
