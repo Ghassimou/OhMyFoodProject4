@@ -1,30 +1,26 @@
 main {
   width: 100%;
 }
-
-//all responsive screen >= mobile
 .section__heading {
-  @include mobile {
-    width: 100%;
-    height: 287px;
-    @include padding-tb(39px, 57px);
-    @include flex-box(column);
-    @include flex-align(center);
-    row-gap: 27px;
-    @include color-bg(background, $bg-light-grey);
+  width: 100%;
+  height: 287px;
+  @include padding-tb(39px, 57px);
+  @include flex-box(column);
+  @include flex-align(center);
+  row-gap: 27px;
+  @include color-bg(background, $bg-light-grey);
 
-    .title {
-      @include font-family("RobotoBold", 24px, center);
-    }
+  .title {
+    @include font-family("RobotoBold", 24px, center);
+  }
 
-    .txt {
-      @include font-family("RobotoLight", 18px, center);
-      @include color-bg(color, $font-grey);
-    }
+  .txt {
+    @include font-family("RobotoLight", 18px, center);
+    @include color-bg(color, $font-grey);
+  }
 
-    .content__btn--purple {
-      width: 218px;
-    }
+  .content__btn--purple {
+    width: 218px;
   }
 }
 
@@ -138,36 +134,111 @@ main {
       @include font-family("RobotoLight", 17px, start);
     }
 
+    //**************************************
+    // code done
+
+    //container like heart
     .heart-like {
+      @include mobile{
+      width: 22px;
+      height: 21px;
       position: relative;
-      padding-bottom: 15px;
 
-      .empty-heart {
-        width: 25.5px;
-        height: 25.5px;
-        position: absolute;
-        left: -50px;
-      }
+      //container checkbox
+      .fill-heart {
+        position: relative;
+        font-size: 20px;
+        // input checkbox
 
-      .filled-heart {
-        position: absolute;
-        left: -50px;
-        opacity: 0;
-        transition: opacity 400ms;
-        font-size: 24px;
+        input {
+          position: absolute;
+          opacity: 0;
+          z-index: 2;
+          top: 4px;
+          left: 3px;
+        }
 
-        &:hover {
-          opacity: 1;
-          color: $heart-color;
+        label {
+          opacity: 0;
+          transition: opacity 400ms;
         }
       }
+
+      .fill-heart input:checked + label {
+        opacity: 1;
+      }
+
+      .fill-heart input:focus + label {
+        box-shadow: 0 0 0 0 30em gray;
+      }
+
+      // emty heart svg
+      .empty-heart {
+        width: 22px;
+        height: 21px;
+        position: absolute;
+        top: 0;
+        left: -1px;
+      }
     }
+  }
+    //********************************************
+    //code test----------------------------------
+
+    // //container like heart
+    // .heart-like{
+    //   width: 22px;
+    //   height: 21px;
+    //   position: relative;
+
+    // }
+
+    // //container checkbox
+    // .fill-heart{
+    //   position: relative;
+    //   font-size: 20px;
+    // }
+
+    // // input checkbox
+    // .fill-heart input{
+    //   position: absolute;
+    //   opacity: 0;
+    //   z-index: 2;
+    //   top: 2px;
+    //   left: 3px;
+    // }
+
+    // .fill-heart label{
+    //   opacity: 0;
+    //   transition: opacity 400ms;
+    // }
+
+    // .fill-heart input:checked + label{
+    //  opacity: 1;
+    // }
+
+    // .fill-heart input:focus + label{
+    //   box-shadow: 0 0 0 0 30em gray;
+
+    // }
+
+    // // emty heart svg
+    // .empty-heart {
+    //   width: 22px;
+    //   height: 21px;
+    //   position: absolute;
+    //   top: 0;
+    //   left: -1px;
+    // }
+
+    // //____________________________________________________
   }
 }
 
 //all responsive screen >= tablet
 main {
-  @include desktop {
+  @include tablet {
+    @include desktop;
     @include flex-box(column);
     row-gap: 30px;
 
@@ -178,7 +249,8 @@ main {
       @include flex-align(center, space-between);
       row-gap: 18px;
 
-      .card--title {//revoir attention herite padding 180
+      .card--title {
+        //revoir attention herite padding 180
         @include font-family("RobotoBold", 40px, center);
       }
 
@@ -186,15 +258,13 @@ main {
         @include font-family("RobotoLight", 18px, center);
         @include color-bg(color, $font-grey);
       }
-
-      .content__btn--purple {
-      }
     }
 
     .section__btn {
       height: 228.38px;
       @include padding-tb(50px, 50px);
       @include padding-rl(180px, 180px);
+      @include margin-rl(0, 12px);
 
       .title {
         @include padding-tb(0, 25px);
@@ -233,6 +303,33 @@ main {
         .menu {
           @include tablet {
             width: 45%;
+          }
+        }
+      }
+      //version desktop********************************************
+      .heart-like {
+        @include desktop {
+          position: relative;
+          padding-bottom: 15px;
+
+          .empty-heart {
+            width: 25.5px;
+            height: 25.5px;
+            position: absolute;
+            left: -50px;
+          }
+
+          .filled-heart {
+            position: absolute;
+            left: -50px;
+            opacity: 0;
+            transition: opacity 400ms;
+            font-size: 24px;
+          }
+
+          .filled-heart:hover {
+            opacity: 1;
+            color: $heart-color;
           }
         }
       }
