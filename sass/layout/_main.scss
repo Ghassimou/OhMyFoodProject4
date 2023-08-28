@@ -133,106 +133,61 @@ main {
     .subtitle {
       @include font-family("RobotoLight", 17px, start);
     }
-
-    //**************************************
-    // code done
-
     //container like heart
     .heart-like {
-      @include mobile{
-      width: 22px;
-      height: 21px;
-      position: relative;
-
-      //container checkbox
-      .fill-heart {
-        position: relative;
-        font-size: 20px;
-        // input checkbox
-
-        input {
-          position: absolute;
-          opacity: 0;
-          z-index: 2;
-          top: 4px;
-          left: 3px;
-        }
-
-        label {
-          opacity: 0;
-          transition: opacity 400ms;
-        }
-      }
-
-      .fill-heart input:checked + label {
-        opacity: 1;
-      }
-
-      .fill-heart input:focus + label {
-        box-shadow: 0 0 0 0 30em gray;
-      }
-
-      // emty heart svg
-      .empty-heart {
+      @include margin-rl(25px, 25px);
+      @include mobile {
         width: 22px;
-        height: 21px;
-        position: absolute;
-        top: 0;
-        left: -1px;
+        height: 25px;
+        position: relative;
+
+        // emty heart svg
+        .empty-heart {
+          width: 24px;
+          height: 25px;
+          position: absolute;
+          top: 0;
+          left: -1px;
+        }
+
+        //container checkbox
+        .fill-heart {
+          z-index: 1;
+          position: relative;
+          top: 0;
+          left: 0;
+          font-size: 22px;
+          background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          // input checkbox
+          input {
+            position: absolute;
+            opacity: 0;
+            z-index: 2;
+            top: 4px;
+            left: 4px;
+            cursor: pointer;
+          }
+
+          label {
+            opacity: 1;
+            transition: opacity 0.1s;
+          }
+        }
+
+        .fill-heart input:checked + label {
+          opacity: 1;
+        }
+        
+        .fill-heart input:checked + label ~ .empty-heart {
+          opacity: 0;
+        }
       }
     }
   }
-    //********************************************
-    //code test----------------------------------
-
-    // //container like heart
-    // .heart-like{
-    //   width: 22px;
-    //   height: 21px;
-    //   position: relative;
-
-    // }
-
-    // //container checkbox
-    // .fill-heart{
-    //   position: relative;
-    //   font-size: 20px;
-    // }
-
-    // // input checkbox
-    // .fill-heart input{
-    //   position: absolute;
-    //   opacity: 0;
-    //   z-index: 2;
-    //   top: 2px;
-    //   left: 3px;
-    // }
-
-    // .fill-heart label{
-    //   opacity: 0;
-    //   transition: opacity 400ms;
-    // }
-
-    // .fill-heart input:checked + label{
-    //  opacity: 1;
-    // }
-
-    // .fill-heart input:focus + label{
-    //   box-shadow: 0 0 0 0 30em gray;
-
-    // }
-
-    // // emty heart svg
-    // .empty-heart {
-    //   width: 22px;
-    //   height: 21px;
-    //   position: absolute;
-    //   top: 0;
-    //   left: -1px;
-    // }
-
-    // //____________________________________________________
-  }
+  //*************************************************
 }
 
 //all responsive screen >= tablet
@@ -240,16 +195,15 @@ main {
   @include tablet {
     @include desktop;
     @include flex-box(column);
-    row-gap: 30px;
 
     .section__heading {
-      height: 179px;
-      @include padding-tb(30px, 0);
+      height: 239px;
+      @include padding-tb(30px, 30px);
       @include flex-box(column);
       @include flex-align(center, space-between);
       row-gap: 18px;
 
-      .card--title {
+      .title {
         //revoir attention herite padding 180
         @include font-family("RobotoBold", 40px, center);
       }
@@ -261,9 +215,14 @@ main {
     }
 
     .section__btn {
+      @include desktop {
+        @include padding-rl(180px, 180px);
+      }
+      @include padding-rl(20px, 20px);
+
       height: 228.38px;
       @include padding-tb(50px, 50px);
-      @include padding-rl(180px, 180px);
+
       @include margin-rl(0, 12px);
 
       .title {
@@ -286,12 +245,18 @@ main {
     }
 
     .section__menu {
-      @include padding-rl(180px, 180px);
-      @include padding-tb(0, 30px);
+      @include desktop {
+        @include padding-rl(180px, 180px);
+      }
+      @include padding-rl(20px, 20px);
+      @include padding-tb(30px, 30px);
 
       .title {
         @include padding-tb(0, 25px);
-        @include padding-rl(180px, 0);
+        @include padding-rl(20px, 0);
+        @include desktop {
+          @include padding-rl(180px, 0px);
+        }
       }
 
       .content__menu {
@@ -329,7 +294,9 @@ main {
 
           .filled-heart:hover {
             opacity: 1;
-            color: $heart-color;
+            background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+            background-clip: text;
+            color: transparent;
           }
         }
       }

@@ -1,46 +1,67 @@
-// .loader{
-//     width: 100%;
-//     height: 100%;
-//     background: url(assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-//     background-size: cover;
-// }
+.loader{
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: #7e7e7e;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
 .grow-txt {
+  @include flex-box(row);
+  @include flex-align(center, center);
   span {
-    @include style-font;
-    color: #7e7e7e;
-    animation: grow-txt 1s linear infinite;
+    @include font-family("Shrikhand", 45px);
+    letter-spacing: 20px;
+    color: #353535;
+   
+    animation: grow-txt 1000ms linear infinite;
   }
 
   .letter:nth-child(1) {
+    animation-delay: 0.1s;
   }
   .letter:nth-child(2) {
+    animation-delay: 0.15s;
   }
   .letter:nth-child(3) {
+    animation-delay: 0.25s;
   }
   .letter:nth-child(4) {
+    animation-delay: 0.4s;
   }
   .letter:nth-child(5) {
+    animation-delay: 0.55s;
   }
   .letter:nth-child(6) {
+    animation-delay: 0.7s;
   }
   .letter:nth-child(7) {
+    animation-delay: 0.85s;
   }
 }
 
 @keyframes grow-txt {
   0% {
-    transform: scale(1.5);
-    color: #9356dc;
+    transform: scale(0);
+    color: red;
+    text-shadow: 0 0 20px red;
   }
 
-  20% {
-    transform: scale(1);
-    color: #ff79da;
+  15% {
+    transform: scale(.5);
+    color: orange;
   }
 
-  50% {
-    transform: scale(1.5);
-    color: #9356dc;
-    text-shadow: 0 0 10px #9356dc;
+  45% {
+    transform: scale(0);
+    color: #008766;
+    text-shadow: 0 0 20px #008766;
   }
+}
+
+.main-page{
+ // 4S
 }

@@ -11,13 +11,15 @@
 .purple {
   width: 218px;
   height: 50px;
-  @include radius(color, $white, 30px);
+  @include radius(color, $white, 25px);
   @include padding-rl(18.75px, 18.75px);
   @include btn__gradient-purple;
   @include font-family("RobotoMedium", 16px);
+  transition: all 0.3s ease-in-out ;
+
   &:hover {
-    //background: ($background-image);
-    opacity: 0.9;
+    @include btn__shadow-purple;
+    opacity: 80%;
   }
 }
 //Les boutons couleur grises
@@ -31,9 +33,6 @@
   @extend %btn;
   height: 72.37px;
 
-  &:hover {
-    background: ($font-grey);
-  }
   .icon--grey {
     @include color-bg(color, $light-grey);
     font-size: 21px;
