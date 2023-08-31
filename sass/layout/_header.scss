@@ -1,4 +1,5 @@
 body {
+  position: relative;
   @include mobile {
     @include flex-box(column);
     @include flex-align(center);
