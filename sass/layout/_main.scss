@@ -174,7 +174,7 @@ main {
           label {
             opacity: 1;
             transition: opacity 0.1s;
-          }
+          }    
         }
 
         .fill-heart input:checked + label {
@@ -278,18 +278,20 @@ main {
           padding-bottom: 15px;
 
           .empty-heart {
-            width: 25.5px;
-            height: 25.5px;
+            width: 24px;
+            height: 25px;
             position: absolute;
-            left: -50px;
+            left: 0px;
+            left: -1px;
           }
 
           .filled-heart {
             position: absolute;
-            left: -50px;
+            left: 0px;
+            left: -1px;
             opacity: 0;
             transition: opacity 400ms;
-            font-size: 24px;
+            font-size: 22px;
           }
 
           .filled-heart:hover {
