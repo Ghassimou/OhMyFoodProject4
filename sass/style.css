@@ -674,9 +674,6 @@ main {
   padding-bottom: 22px;
   padding-right: 25px;
   padding-left: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
   background: #353535;
 }
 .footer__link .logo {
@@ -688,9 +685,6 @@ main {
   color: #fff;
 }
 .footer__link .span__link {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
   -moz-column-gap: 7px;
        column-gap: 7px;
 }
@@ -730,5 +724,266 @@ main {
   }
   .footer__link .span__link .without--icone {
     padding-left: 30px;
+  }
+}
+
+* {
+  box-shadow: 0 0 0 3px red inset;
+}
+
+.body__card {
+  background-color: #ff79da;
+}
+@media (min-width: 0) {
+  .body__card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+.body__card .card__header__nav {
+  background-color: chocolate;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.body__card .card__header__nav header {
+  padding-right: 89px;
+  padding-left: 42px;
+}
+.body__card .card__header__nav .nav__icon__arrow {
+  padding-right: 0;
+  padding-left: 17px;
+}
+.body__card .card__header__nav .nav__icon__arrow .fa-arrow-left {
+  color: black;
+}
+
+.main__card {
+  padding-top: 0;
+  padding-bottom: 40px;
+  background-color: #f6f6f6;
+}
+.main__card .card__img {
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__menu {
+  position: relative;
+  margin-top: -51px;
+  padding-right: 13px;
+  padding-left: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 40px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  background-color: #f6f6f6;
+}
+@media (min-width: 1024px) {
+  .card__menu {
+    margin-right: 191px;
+    margin-left: 191px;
+    padding-right: 211px;
+    padding-left: 211px;
+  }
+}
+.card__menu .content__title__heart-like {
+  padding-top: 32px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__menu .title {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  text-align: start;
+}
+.card__menu .heart-like {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+@media (min-width: 0) {
+  .card__menu .heart-like {
+    width: 22px;
+    height: 25px;
+    position: relative;
+  }
+  .card__menu .heart-like .empty-heart {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: -1px;
+  }
+  .card__menu .heart-like .fill-heart {
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 22px;
+    background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .card__menu .heart-like .fill-heart input {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    top: 4px;
+    left: 4px;
+    cursor: pointer;
+  }
+  .card__menu .heart-like .fill-heart label {
+    opacity: 1;
+    transition: opacity 0.1s;
+  }
+  .card__menu .heart-like .fill-heart input:checked + label {
+    opacity: 1;
+  }
+  .card__menu .heart-like .fill-heart input:checked + label ~ .empty-heart {
+    opacity: 0;
+  }
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: unset;
+  gap: 12px;
+}
+.card__content .card__title {
+  font-family: "RobotoLight";
+  font-size: 16px;
+  text-align: start;
+  text-transform: uppercase;
+}
+.card__content .card__title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  display: block;
+  background-color: #99e2d0;
+}
+.card__content .card__txt {
+  position: relative;
+  height: 69px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  transition-property: transform;
+}
+.card__content .card__txt:hover {
+  padding-right: 83px;
+}
+.card__content .card__txt .txt__bolt {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "RobotoMedium";
+  font-size: 18px;
+  text-align: start;
+}
+.card__content .card__txt .txt__light {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 27px;
+  font-family: "RobotoLight";
+  font-size: 15.043px;
+  text-align: start;
+}
+.card__content .card__txt .price {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  font-family: "RobotoBolt";
+  font-size: 15.043px;
+  text-align: start;
+  color: #353535;
+  font-weight: 700;
+  transition-property: transform;
+}
+.card__content .card__txt .price:hover {
+  padding-right: 83px;
+}
+.card__content .card__txt::before {
+  content: "\f058";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #99e2d0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  opacity: 0;
+  transition: all 0.6 ease-in;
+}
+.card__content .card__txt:hover::before {
+  width: 59px;
+  opacity: 1;
+}
+
+@media (min-width: 0) {
+  .footer__link__card {
+    row-gap: 10px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-right: 25px;
+    padding-left: 25px;
+    background: #353535;
+  }
+  .footer__link__card .logo {
+    padding-top: 0;
+    padding-bottom: 16px;
+    font-family: "Shrikhand";
+    font-size: 18px;
+    text-align: start;
+    color: #fff;
+  }
+  .footer__link__card .span__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+    -moz-column-gap: 7px;
+         column-gap: 7px;
+  }
+  .footer__link__card .span__link .link {
+    color: #fff;
+    font-family: "RobotoMedium";
+    font-size: 16px;
+    text-align: start;
+  }
+  .footer__link__card .span__link i {
+    padding-right: 11px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -21,19 +21,6 @@
     @content;
   }
 }
-//align the flexible cross-axis
-@mixin flex-cross($align-items: center) {
-  display: flex;
-  flex-direction: column;
-  align-items: $align-items;
-}
-//align the flexible main-axis
-@mixin flex-main($align-items: center, $justify-content: unset) {
-  display: flex;
-  flex-direction: row;
-  align-items: $align-items;
-  justify-content: $justify-content;
-}
 
 //test flex
 @mixin flex-box($flex-direction: row) {

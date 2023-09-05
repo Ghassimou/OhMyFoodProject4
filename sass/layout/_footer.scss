@@ -3,7 +3,7 @@
   row-gap: 10px;
   @include padding-tb(22px, 22px);
   @include padding-rl(25px, 25px);
-  @include flex-cross(start);
+  //@include flex-cross(start);
   @include color-bg(background, $font-grey);
   
   .logo {
@@ -13,7 +13,7 @@
   }
 
   .span__link {
-    @include flex-cross(start);
+    //@include flex-cross(start);
     column-gap: 7px;
 
     .link {
