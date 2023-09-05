@@ -16,6 +16,12 @@
   }
 }
 
+@mixin desktopL {
+  @media (min-width: map-get($breakpoints,"desktopL")) {
+    @content;
+  }
+}
+
 @mixin breakpoint($screen: 0) {
   @media (min-width: $screen) {
     @content;

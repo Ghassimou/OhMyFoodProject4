@@ -9,7 +9,8 @@
 }
 //Le bouton couleur rose headliner
 .purple {
-  width: 218px;
+flex-basis: 218px;
+  // width: 218px;
   height: 50px;
   @include radius(color, $white, 25px);
   @include padding-rl(18.75px, 18.75px);
