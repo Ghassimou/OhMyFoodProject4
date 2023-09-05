@@ -967,4 +967,33 @@ main {
   .footer__link__card .span__link i {
     padding-right: 11px;
   }
+}
+
+@media (min-width: 1024px) {
+  .footer__link__card {
+    height: 114px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+  .footer__link__card .logo {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .footer__link__card .span__link {
+    width: 660px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .footer__link__card .span__link .without--icone {
+    padding-left: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

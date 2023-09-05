@@ -126,7 +126,7 @@
       .fill-heart input:checked + label ~ .fa-regular {
         opacity: 0;
       }
-      
+
     }
   }
 }
@@ -251,6 +251,32 @@
 
       i {
         padding-right: 11px;
+      }
+    }
+  }
+}
+
+//all responsive screen >= tablet
+.footer__link__card {
+  @include desktop {
+    height: 114px;
+    @include padding-tb(30px, 30px);
+    @include flex-box(row-reverse);
+    @include flex-align(center, flex-start);
+    column-gap: 16px;
+
+    .logo {
+      @include padding-tb(0, 0);
+    }
+
+    .span__link {
+      width: 660px;
+      height: 20px;
+      @include flex-box(row);
+      @include padding-tb(0, 0);
+
+      .without--icone {
+        padding-left: 30px;
       }
     }
   }
