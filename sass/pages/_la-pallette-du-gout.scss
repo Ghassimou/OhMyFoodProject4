@@ -101,7 +101,8 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-
+        transition: opacity 0.1s;
+        
         // input checkbox
         input {
           position: absolute;
@@ -110,12 +111,10 @@
           top: 4px;
           left: 4px;
           cursor: pointer;
-          // background-image: none;
         }
 
         label {
           opacity: 0;
-          // transition: opacity 0.1s;
         }
       }
 
@@ -127,7 +126,18 @@
         opacity: 0;
       }
 
+      //hover desktop
+      @include desktop{
+      .fill-heart input:hover + label {
+        opacity: 1;
+      }
+
+      .fill-heart input:hover ~ .fa-regular {
+        opacity: 0;
+      }
     }
+    }
+
   }
 }
 

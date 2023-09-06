@@ -184,6 +184,17 @@ main {
         .fill-heart input:checked + label ~ .empty-heart {
           opacity: 0;
         }
+
+        //hover desktop
+        @include desktop{
+        .fill-heart input:hover + label {
+          opacity: 1;
+        }
+        
+        .fill-heart input:hover ~ .empty-heart {
+          opacity: 0;
+        }
+      }
       }
     }
   }

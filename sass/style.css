@@ -530,6 +530,14 @@ main {
     opacity: 0;
   }
 }
+@media (min-width: 0) and (min-width: 1024px) {
+  .content__menu .card .heart-like .fill-heart input:hover + label {
+    opacity: 1;
+  }
+  .content__menu .card .heart-like .fill-heart input:hover ~ .empty-heart {
+    opacity: 0;
+  }
+}
 
 @media (min-width: 768px) {
   main {
@@ -813,6 +821,7 @@ main {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    transition: opacity 0.1s;
   }
   .card__menu .heart-like .fill-heart input {
     position: absolute;
@@ -829,6 +838,14 @@ main {
     opacity: 1;
   }
   .card__menu .heart-like .fill-heart input:checked + label ~ .fa-regular {
+    opacity: 0;
+  }
+}
+@media (min-width: 0) and (min-width: 1024px) {
+  .card__menu .heart-like .fill-heart input:hover + label {
+    opacity: 1;
+  }
+  .card__menu .heart-like .fill-heart input:hover ~ .fa-regular {
     opacity: 0;
   }
 }
