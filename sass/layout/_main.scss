@@ -166,9 +166,11 @@ main {
             position: absolute;
             opacity: 0;
             z-index: 2;
-            top: 4px;
-            left: 4px;
+            top: -5px;
+            left: -5px;
             cursor: pointer;
+            width: 35px;
+            height: 35px;
           }
 
           label {
@@ -186,7 +188,8 @@ main {
         }
 
         //hover desktop
-        @include desktop{
+        @include mobile{
+          
         .fill-heart input:hover + label {
           opacity: 1;
         }

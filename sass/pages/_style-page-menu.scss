@@ -29,6 +29,10 @@
 .main__card {
   @include padding-tb(0, 40px);
   background-color: #f6f6f6;
+  //backgrpound tablet desktop
+  @include tablet{
+    background-color: $white;
+  }
 
   .card__img {
     width: 100%;
@@ -127,7 +131,7 @@
       }
 
       //hover desktop
-      @include desktop{
+      @include tablet{
       .fill-heart input:hover + label {
         opacity: 1;
       }
