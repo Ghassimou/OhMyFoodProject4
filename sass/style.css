@@ -886,7 +886,7 @@ main {
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-  transition-property: transform;
+  transition: transform 3s;
 }
 .card__content .card__txt:hover {
   padding-right: 83px;
@@ -925,10 +925,11 @@ main {
   text-align: start;
   color: #353535;
   font-weight: 700;
-  transition-property: transform;
+  cursor: pointer;
+  transition: padding-right 0.3s cubic-bezier(0.042, 0, 0.58, 1);
 }
 .card__content .card__txt .price:hover {
-  padding-right: 83px;
+  padding-right: 69px;
 }
 .card__content .card__txt::before {
   content: "\f058";
@@ -941,6 +942,7 @@ main {
   position: absolute;
   top: 0;
   right: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -948,12 +950,11 @@ main {
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  opacity: 0;
-  transition: all 0.6 ease-in;
+  cursor: pointer;
+  transition: width 0.3s cubic-bezier(0.042, 0, 0.58, 1);
 }
 .card__content .card__txt:hover::before {
   width: 59px;
-  opacity: 1;
 }
 
 @media (min-width: 0) {

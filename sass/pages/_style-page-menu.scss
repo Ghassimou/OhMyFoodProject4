@@ -30,7 +30,7 @@
   @include padding-tb(0, 40px);
   background-color: #f6f6f6;
   //backgrpound tablet desktop
-  @include tablet{
+  @include tablet {
     background-color: $white;
   }
 
@@ -106,7 +106,7 @@
         background-clip: text;
         color: transparent;
         transition: opacity 0.1s;
-        
+
         // input checkbox
         input {
           position: absolute;
@@ -131,17 +131,16 @@
       }
 
       //hover desktop
-      @include tablet{
-      .fill-heart input:hover + label {
-        opacity: 1;
-      }
+      @include tablet {
+        .fill-heart input:hover + label {
+          opacity: 1;
+        }
 
-      .fill-heart input:hover ~ .fa-regular {
-        opacity: 0;
+        .fill-heart input:hover ~ .fa-regular {
+          opacity: 0;
+        }
       }
     }
-    }
-
   }
 }
 
@@ -172,7 +171,8 @@
     border-radius: 15px;
     background-color: $white;
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-    transition-property: transform;
+    transition: transform 3s;
+
     &:hover {
       padding-right: 83px;
     }
@@ -189,7 +189,6 @@
       white-space: nowrap;
       overflow: hidden;
       padding-right: 27px;
-
       @include font-family("RobotoLight", 15.043px, start);
     }
 
@@ -206,12 +205,25 @@
       @include font-family("RobotoBolt", 15.043px, start);
       color: #353535;
       font-weight: 700;
-      transition-property: transform;
+      cursor: pointer;
+      transition: padding-right 0.3s cubic-bezier(0.042, 0, 0.58, 1);
 
       &:hover {
-        padding-right: 83px;
+        padding-right: 69px;
+        // animation: slidein-right .5s cubic-bezier(0.042, 0, 0.58, 1) forwards;
       }
     }
+    //keyframes************
+    // @keyframes slidein-right {
+    //   from {
+    //     padding-right: 0;
+    //   }
+    
+    //   to {
+    //     padding-right: 100px;
+    //   }
+    // }
+    //********************
   }
 
   .card__txt::before {
@@ -225,18 +237,32 @@
     position: absolute;
     top: 0;
     right: 0;
+    overflow: hidden;
     @include flex-box(column);
     @include flex-align(center, center);
     background-color: #99e2d0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    opacity: 0;
-    transition: all 0.6 ease-in;
+    cursor: pointer;
+    transition: width 0.3s cubic-bezier(0.042, 0, 0.58, 1);
   }
   .card__txt:hover::before {
+    //animation: slidein-right .5s cubic-bezier(0.042, 0, 0.58, 1) forwards;
     width: 59px;
-    opacity: 1;
   }
+ //keyframes************
+//  @keyframes width-right {
+//   from {
+//     width: 0;
+//   }
+
+//   to {
+//     width: 100%px;
+//     padding-right: 100px;
+//   }
+//}
+//********************
+
 }
 
 .footer__link__card {
