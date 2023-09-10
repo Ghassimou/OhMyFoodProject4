@@ -6,13 +6,13 @@ body {
   }
 }
 
-//header container
+//Header content
 .header {
   @include flex-box(column);
   @include flex-align(center);
 }
 
-//style logo color black
+//Logo color black
 .logo--txt {
   @include tablet {
     display: none;
@@ -24,7 +24,7 @@ body {
   @include font-family("Shrikhand", 30px);
 }
 
-//style navigation icone
+//Navigation icon
 .nav__icon-txt {
   width: 100%;
   @include color-bg(background, $bg-nav);
@@ -43,7 +43,7 @@ body {
   }
 }
 
-//all responsive screen >= tablet
+//All responsive screen >= tablet
 .header {
   .logo--svg {
     @include mobile {

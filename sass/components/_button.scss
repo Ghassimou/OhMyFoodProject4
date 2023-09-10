@@ -1,29 +1,20 @@
-//Les propietés des boutons gris
-%btn {
-  @include radius(color, black, 20px);
-  @include font-family("RobotoMedium", 16px);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-//Le bouton couleur rose headliner
+//The pink headliner button
 .purple {
-flex-basis: 218px;
-  // width: 218px;
+  flex-basis: 218px;
   height: 50px;
   @include radius(color, $white, 25px);
   @include padding-rl(18.75px, 18.75px);
   @include btn__gradient-purple;
   @include font-family("RobotoMedium", 16px);
-  transition: all 0.3s ease-in-out ;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     @include btn__shadow-purple;
     opacity: 80%;
   }
 }
-//Les boutons couleur grises
+
+//Gray buttons
 .btn--grey {
   flex-grow: 1;
   flex-basis: 322.48px;
@@ -41,12 +32,15 @@ flex-basis: 218px;
       color: ($linear-purple);
     }
   }
+
   .fa-mobile-screen-button {
     @include padding-rl(27px, 22.71px);
   }
+
   .fa-list {
     @include padding-rl(21px, 23.73px);
   }
+
   .fa-store {
     @include padding-rl(18px, 24.73px);
   }

@@ -1,31 +1,26 @@
-//var breackpoint for mixins only screen
+//Breackpoint for mixins only screen
 $breakpoints: (
   "mobile": 0,
-  //flexbox column items center
   "tablet": 768px,
-  //flexbox column items space between
   "desktop": 1024px,
-  //flexbox column items space between
   "desktopL": 1440px,
 );
 
-//Var color main page
+//Color main page
 $primary-font-purple: #9356dc;
 $secondary-light-pink: #ff79da;
 $tertiaire-font-green: #008766;
 $tertiaire-light-green: #99e2d0;
 
-//Var seconde color
+//Seconde color
 $font-grey: #353535;
 $light-grey: #7e7e7e;
 $font-blue: #003a68;
 $light-blue: #89c8fa;
 $white: #fff;
-$black:black;
+$black: black;
 $bg-nav: #eaeaea;
 $bg-light-grey: #f6f6f6;
 
 $lighten-grey: lighten($font-grey, 76%);
 $linear-purple: (rgba(210, 99, 222, 100));
-$heart-color: #9356dc;
-

@@ -1,0 +1,36 @@
+//Properties of loader
+%loader-property {
+  @include flex-box(column);
+  @include flex-align(center, center);
+}
+
+//Properties of gray buttons
+%btn {
+  @include radius(color, black, 20px);
+  @include font-family("RobotoMedium", 16px);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+//Properties border radius of image plate
+%border-radius-15px {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+//Properties border radius of image plate
+%border-radius-2px {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+// Properties style text ellipsis page menu card
+%style-txt {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

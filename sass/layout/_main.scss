@@ -89,8 +89,7 @@ main {
       width: 100%;
       height: 174px;
       object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      @extend %border-radius-15px;
     }
   }
 
@@ -105,10 +104,11 @@ main {
     @include color-bg(background, $tertiaire-light-green);
     @include color-bg(color, $tertiaire-font-green);
     @include font-family("RobotoMedium", 14px, center);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    // border-top-left-radius: 2px;
+    // border-top-right-radius: 2px;
+    // border-bottom-left-radius: 2px;
+    // border-bottom-right-radius: 2px;
+    @extend %border-radius-2px;
   }
 
   .card {
@@ -117,8 +117,7 @@ main {
     @include color-bg(background, $white);
     @include padding-tb(16px, 12px);
     @include padding-rl(0, 13px);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    @extend %border-radius-15px;
 
     .txt {
       @include color-bg(color, black);
@@ -133,7 +132,7 @@ main {
     .subtitle {
       @include font-family("RobotoLight", 17px, start);
     }
-    //container like heart
+    //Content like heart
     .heart-like {
       @include margin-rl(25px, 25px);
       @include mobile {
@@ -141,7 +140,7 @@ main {
         height: 25px;
         position: relative;
 
-        // emty heart svg
+        //Emty heart svg
         .empty-heart {
           width: 24px;
           height: 25px;
@@ -150,7 +149,7 @@ main {
           left: -1px;
         }
 
-        //container checkbox
+        //Content checkbox
         .fill-heart {
           z-index: 1;
           position: relative;
@@ -161,7 +160,7 @@ main {
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
-          // input checkbox
+          //Input checkbox
           input {
             position: absolute;
             opacity: 0;
@@ -176,35 +175,33 @@ main {
           label {
             opacity: 1;
             transition: opacity 0.1s;
-          }    
+          }
         }
 
         .fill-heart input:checked + label {
           opacity: 1;
         }
-        
+
         .fill-heart input:checked + label ~ .empty-heart {
           opacity: 0;
         }
 
-        //hover desktop
-        @include mobile{
-          
-        .fill-heart input:hover + label {
-          opacity: 1;
+        //Hover desktop
+        @include mobile {
+          .fill-heart input:hover + label {
+            opacity: 1;
+          }
+
+          .fill-heart input:hover ~ .empty-heart {
+            opacity: 0;
+          }
         }
-        
-        .fill-heart input:hover ~ .empty-heart {
-          opacity: 0;
-        }
-      }
       }
     }
   }
-  //*************************************************
 }
 
-//all responsive screen >= tablet
+//All responsive screen >= tablet
 main {
   @include tablet {
     @include desktop;
@@ -218,7 +215,6 @@ main {
       row-gap: 18px;
 
       .title {
-        //revoir attention herite padding 180
         @include font-family("RobotoBold", 40px, center);
       }
 
@@ -262,12 +258,14 @@ main {
       @include desktop {
         @include padding-rl(180px, 180px);
       }
+
       @include padding-rl(20px, 20px);
       @include padding-tb(30px, 30px);
 
       .title {
         @include padding-tb(0, 25px);
         @include padding-rl(20px, 0);
+
         @include desktop {
           @include padding-rl(180px, 0px);
         }
@@ -285,39 +283,6 @@ main {
           }
         }
       }
-      //version desktop********************************************
-      
-      // .heart-like {
-      //   @include desktop {
-      //     position: relative;
-      //     padding-bottom: 15px;
-
-      //     .empty-heart {
-      //       width: 24px;
-      //       height: 25px;
-      //       position: absolute;
-      //       left: 0px;
-      //       left: -1px;
-      //       opacity: 1;
-      //     }
-
-      //     .filled-heart {
-      //       position: absolute;
-      //       left: 0px;
-      //       left: -1px;
-      //       opacity: 0;
-      //       transition: opacity 400ms;
-      //       font-size: 22px;
-      //     }
-
-      //     .filled-heart:hover {
-      //       opacity: 1;
-      //       background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-      //       background-clip: text;
-      //       color: transparent;
-      //     }
-      // }
-      //}
     }
   }
 }

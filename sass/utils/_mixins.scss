@@ -28,7 +28,7 @@
   }
 }
 
-//test flex
+//Flexbox
 @mixin flex-box($flex-direction: row) {
   display: flex;
   flex-direction: $flex-direction;
@@ -39,7 +39,7 @@
   justify-content: $justify-content;
 }
 
-//Mixins font-family with editable arguments
+//Font-family with editable arguments
 @mixin font-family(
   $font-family: "Shrikhand",
   $size: null,
@@ -50,25 +50,25 @@
   text-align: $text-align;
 }
 
-//Mixins management color and background
+//Management color and background
 @mixin color-bg($color, $valeur) {
   #{$color}: $valeur;
 }
-//broder solid and color
-// test
+
+//Broder solid and color
 @mixin border($color, $valeur, $border: null) {
   #{$color}: $valeur;
   border: $border;
 }
 
-// Mixin border-radius
+//Border-radius
 @mixin radius($color, $valeur, $border-radius: null, $border: none) {
   #{$color}: $valeur;
   border-radius: $border-radius;
   border: $border;
 }
 
-// mixin paddings *****************
+//Padding 4 sides
 @mixin padding($padding, $valeur) {
   padding-top: $valeur;
   padding-right: $valeur;
@@ -76,15 +76,19 @@
   padding-left: $valeur;
 }
 
+//Padding 2 sides tope/bottom
 @mixin padding-tb($top: null, $bottom: null) {
   padding-top: $top;
   padding-bottom: $bottom;
 }
+
+//Padding 2 sides right/left
 @mixin padding-rl($right: null, $left: null) {
   padding-right: $right;
   padding-left: $left;
 }
 
+//Margin 2 sides right/left
 @mixin margin-rl($right: null, $left: null) {
   margin-right: $right;
   margin-left: $left;
@@ -95,6 +99,7 @@
   box-shadow: inset 0px 0px 1px #7e7e7e;
 }
 
+//Boxe shadow btn
 @mixin btn__shadow {
   box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
     5px 5px 9px rgba(94, 104, 121, 0.3);
@@ -104,11 +109,12 @@
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.25);
 }
 
+//Background button gradient purple
 @mixin btn__gradient-purple($border-radius: 25px) {
   #{background}: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
 }
 
-//button light
+//Button light
 @mixin btn__shadow-grey {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }

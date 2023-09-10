@@ -13,7 +13,7 @@
   }
 
   .span__link {
-    //@include flex-cross(start);
+    @include flex-box(column);
     column-gap: 7px;
 
     .link {
