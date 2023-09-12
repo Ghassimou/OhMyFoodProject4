@@ -29,7 +29,7 @@
     @include color-bg(color, $light-grey);
     font-size: 21px;
     &:hover {
-      color: ($linear-purple);
+      color: ($primary-font-purple);
     }
   }
 

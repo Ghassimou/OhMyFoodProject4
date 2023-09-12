@@ -111,7 +111,7 @@ li {
   font-size: 21px;
 }
 .btn--grey .icon--grey:hover {
-  color: rgb(210, 99, 222);
+  color: #9356dc;
 }
 .btn--grey .fa-mobile-screen-button {
   padding-right: 27px;
