@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le délice des sens</title>
+    <title>La palette du goût</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="sass/style.css" />
+    <link rel="stylesheet" href="../sass/style.css" />
   </head>
   <body class="body__card">
     <div class="card__header__nav">
@@ -29,27 +29,27 @@
         <a class="logo--svg" href="#"
           ><img
             class="svg"
-            src="sass/assets/images/logo/ohmyfood.png"
+            src="../assets/images/logo/ohmyfood.png"
             alt="Retour sur accueil"
           />
         </a>
       </header>
       <nav class="nav__icon__arrow">
-        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
       </nav>
     </div>
     <main class="main__card">
       <!-- image du restaurant -->
       <img
         class="card__img"
-        src="sass/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+        src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
         alt="Image d'un plat à déguster"
       />
 
       <section class="card__menu">
         <div class="content__title__heart-like">
           <!-- titre de la page restaurant -->
-          <h2 class="title">Le délice des sens</h2>
+          <h2 class="title">La palette du goût</h2>
           <!-- Le bouton like  -->
           <div class="heart-like">
             <div class="fill-heart">
@@ -59,69 +59,76 @@
               ></label>
               <i class="fa-regular fa-heart"></i>
             </div>
-            
           </div>
         </div>
         <article class="card__content">
           <h3 class="card__title">Entrées</h3>
-          <div class="card__txt">
-            <p class="txt__bolt">Tartare de thon</p>
-            <p class="txt__light">Assaisonné au yuzu</p>
-            <span class="price"> 25€ </span>
-          </div>
+          <div class="card__list entry">
+            <div class="card__txt">
+              <p class="txt__bolt">Fricassée d'escargots</p>
+              <p class="txt__light">piment d'Espelette</p>
+              <span class="price"> 25€ </span>
+            </div>
 
-          <div class="card__txt">
-            <p class="txt__bolt">Bouchée de homard croustillant </p>
-            <p class="txt__light">Et sa farandole de petits légumes</p>
-            <span class="price"> 35€ </span>
-          </div>
+            <div class="card__txt">
+              <p class="txt__bolt">Foie gras de canard mi-cuit</p>
+              <p class="txt__light">Et ses copeaux de truffe noire</p>
+              <span class="price"> 35€ </span>
+            </div>
 
-          <div class="card__txt">
-            <p class="txt__bolt">Velouté de cèpes</p>
-            <p class="txt__light">Aux truffes</p>
-            <span class="price"> 20€ </span>
+            <div class="card__txt">
+              <p class="txt__bolt">Œuf au plat</p>
+              <p class="txt__light">Assaisonné à la truffe sur lit de caviar</p>
+              <span class="price"> 20€ </span>
+            </div>
           </div>
         </article>
 
         <article class="card__content">
           <h3 class="card__title">Plats</h3>
-          <div class="card__txt">
-            <p class="txt__bolt">Poulet rôti aux herbes de Provence </p>
-            <p class="txt__light">Et sa crème de truffe</p>
-            <span class="price"> 40€ </span>
-          </div>
+          <div class="card__list plate">
+            <div class="card__txt">
+              <p class="txt__bolt">Filet de bœuf aux herbes</p>
+              <p class="txt__light">Accompagné de sa ribambelle de légumes</p>
+              <span class="price"> 40€ </span>
+            </div>
 
-          <div class="card__txt">
-            <p class="txt__bolt">Langouste rôtie </p>
-            <p class="txt__light">Et ses légumes de saison</p>
-            <span class="price"> 35€ </span>
-          </div>
+            <div class="card__txt">
+              <p class="txt__bolt">Parmentier de queue de bœuf</p>
+              <p class="txt__light">À la truffe noire sur sa purée de panais</p>
+              <span class="price"> 35€ </span>
+            </div>
 
-          <div class="card__txt">
-            <p class="txt__bolt">Côte de bœuf Angus </p>
-            <p class="txt__light">Et sa purée de panais</p>
-            <span class="price"> 44€ </span>
+            <div class="card__txt">
+              <p class="txt__bolt">Filet de turbot</p>
+              <p class="txt__light">Aux agrumes</p>
+              <span class="price"> 44€ </span>
+            </div>
           </div>
         </article>
 
         <article class="card__content">
           <h3 class="card__title">Desserts</h3>
-          <div class="card__txt">
-            <p class="txt__bolt">Farandole de desserts</p>
-            <p class="txt__light">Du chef</p>
-            <span class="price"> 18€ </span>
-          </div>
+          <div class="card__list dessert">
+            <div class="card__txt">
+              <p class="txt__bolt">Paris-Brest</p>
+              <p class="txt__light">Revisité</p>
+              <span class="price"> 18€ </span>
+            </div>
 
-          <div class="card__txt">
-            <p class="txt__bolt">Crème brulée </p>
-            <p class="txt__light">Revisitée</p>
-            <span class="price"> 22€ </span>
-          </div>
+            <div class="card__txt">
+              <p class="txt__bolt">Macaron au chocolat d'exception</p>
+              <p class="txt__light">glace à la vanille de Madagascar</p>
+              <span class="price"> 22€ </span>
+            </div>
 
-          <div class="card__txt">
-            <p class="txt__bolt">Tiramisu </p>
-            <p class="txt__light">À la noisette</p>
-            <span class="price"> 23€ </span>
+            <div class="card__txt">
+              <p class="txt__bolt">Mousse au chocolat</p>
+              <p class="txt__light">
+                Au piment d'Espelette et à la truffe noire
+              </p>
+              <span class="price"> 23€ </span>
+            </div>
           </div>
         </article>
 

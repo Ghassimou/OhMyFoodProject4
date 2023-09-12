@@ -11,11 +11,6 @@
     background-color: $white;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 
-    //Spawn animation
-    opacity: 0;
-    transform: translateX(1024px);
-    animation: appear 4s 0.4s ease-in-out forwards;
-    
     & header {
       width: 100%;
       @include padding-rl(89px, 42px);
@@ -32,9 +27,7 @@
 }
 
 .main__card {
-  @include padding-tb(0, 40px);
   background-color: #f6f6f6;
-
   //background tablet desktop
   @include tablet {
     background-color: $white;
@@ -44,11 +37,6 @@
     width: 100%;
     height: 275px;
     object-fit: cover;
-
-    //Spawn animation
-    opacity: 0;
-    transform: translateY(-300px);
-    animation: appear 3s ease-in-out forwards;
   }
 }
 
@@ -85,7 +73,7 @@
     @include font-family("Shrikhand", 28px, start);
   }
 
-  //Container like heart
+  //Content like heart
   .heart-like {
     @include margin-rl(25px, 25px);
     @include mobile {
@@ -118,7 +106,7 @@
         color: transparent;
         transition: opacity 0.1s;
 
-        // Input checkbox
+        //Input checkbox
         input {
           position: absolute;
           opacity: 0;
@@ -141,7 +129,7 @@
         opacity: 0;
       }
 
-      //hover desktop
+      //Hover desktop
       @include tablet {
         .fill-heart input:hover + label {
           opacity: 1;
@@ -153,14 +141,10 @@
       }
     }
   }
-
-  //Spawn animation
-  opacity: 0;
-  transform: translateY(1550px);
-  animation: appear 3s 0.2s ease-in-out forwards;
 }
 
-.card__content {
+.card__content,
+.card__list {
   width: 100%;
   @include flex-box(column);
   @include flex-align(flex-start);
@@ -169,11 +153,6 @@
   .card__title {
     @include font-family("RobotoLight", 16px, start);
     text-transform: uppercase;
-
-    //Spawn animation
-    opacity: 0;
-    transform: translateX(1024px);
-    animation: appear 4s 0.3s ease-in-out forwards;
   }
 
   .card__title::after {
@@ -194,38 +173,26 @@
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
     transition: transform 3s;
 
-    //Spawn animation
-    opacity: 0;
-    transform: translateY(24px);
-    animation: appear 3s 2.8s ease-in-out forwards;
-
     &:hover {
       padding-right: 83px;
     }
 
     .txt__bolt {
+      position: relative;
       @extend %style-txt;
-      // text-overflow: ellipsis;
-      // white-space: nowrap;
-      // overflow: hidden;
       @include font-family("RobotoMedium", 18px, start);
     }
 
     .txt__light {
       @extend %style-txt;
-      // text-overflow: ellipsis;
-      // white-space: nowrap;
-      // overflow: hidden;
       padding-right: 27px;
       @include font-family("RobotoLight", 15.043px, start);
     }
 
     .price {
-      width: 100%;
-      height: 100%;
+      border-radius: 15px;
+      inset: 0;
       position: absolute;
-      top: 0;
-      right: 0;
       padding-bottom: 15px;
       padding-right: 15px;
       @include flex-box(row);
@@ -241,7 +208,7 @@
       }
     }
   }
-
+ 
   .card__txt::before {
     content: "\f058";
     font-family: FontAwesome;
@@ -300,12 +267,7 @@
 
 //The pink headliner button card
 .content__btn__purple-card {
-  
-  //Spawn animation
-  opacity: 0;
-  transform: translateX(1024px);
-  animation: appear 3s 2.8s ease-in-out forwards;
-
+  @include padding-tb(0, 40px);
   .purple-card {
     flex-basis: 218px;
     height: 50px;
@@ -313,7 +275,6 @@
     @include padding-rl(18.75px, 18.75px);
     @include btn__gradient-purple;
     @include font-family("RobotoMedium", 16px);
-    transition: all 0.3s ease-in-out;
 
     &:hover {
       @include btn__shadow-purple;
@@ -324,12 +285,6 @@
 
 //All responsive screen >= tablet
 .footer__link__card {
-
-  //Spawn animation
-  opacity: 0;
-  transform: translateY(450px);
-  animation: appear 4s 4s ease-in-out forwards;
-
   @include desktop {
     height: 114px;
     @include padding-tb(30px, 30px);
@@ -352,17 +307,37 @@
       }
     }
   }
+}
 
-  //Spawn animation page card
+.card__list {
   @keyframes appear {
-    50% {
-      opacity: 0.8;
-      transform: none;
-    }
-
     100% {
       opacity: 1;
       transform: none;
     }
   }
+}
+
+.entry {
+  //Spawn animation
+  opacity: 0;
+  background-color: transparent;
+  transform: translateY(30px);
+  animation: appear 3s 0.15s cubic-bezier(0.47, 0, 0.75, 0.72) forwards;
+}
+
+.plate {
+  //Spawn animation
+  opacity: 0;
+  background-color: transparent;
+  transform: translateY(30px);
+  animation: appear 3s 1s cubic-bezier(0.47, 0, 0.75, 0.72) forwards;
+}
+
+.dessert {
+  //Spawn animation
+  opacity: 0;
+  background-color: transparent;
+  transform: translateY(30px);
+  animation: appear 3s 2s cubic-bezier(0.47, 0, 0.75, 0.72) forwards;
 }
