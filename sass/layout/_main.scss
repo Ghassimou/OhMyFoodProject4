@@ -104,10 +104,6 @@ main {
     @include color-bg(background, $tertiaire-light-green);
     @include color-bg(color, $tertiaire-font-green);
     @include font-family("RobotoMedium", 14px, center);
-    // border-top-left-radius: 2px;
-    // border-top-right-radius: 2px;
-    // border-bottom-left-radius: 2px;
-    // border-bottom-right-radius: 2px;
     @extend %border-radius-2px;
   }
 
@@ -149,7 +145,7 @@ main {
           left: -1px;
         }
 
-        //Content checkbox
+        //heart felled
         .fill-heart {
           z-index: 1;
           position: relative;
@@ -160,39 +156,17 @@ main {
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
-          //Input checkbox
-          input {
-            position: absolute;
-            opacity: 0;
-            z-index: 2;
-            top: -5px;
-            left: -5px;
-            cursor: pointer;
-            width: 35px;
-            height: 35px;
-          }
-
-          label {
-            opacity: 1;
-            transition: opacity 0.1s;
-          }
-        }
-
-        .fill-heart input:checked + label {
           opacity: 1;
-        }
-
-        .fill-heart input:checked + label ~ .empty-heart {
-          opacity: 0;
+          transition: opacity 0.1s;
         }
 
         //Hover desktop
         @include mobile {
-          .fill-heart input:hover + label {
+          .filled-heart:hover {
             opacity: 1;
           }
 
-          .fill-heart input:hover ~ .empty-heart {
+          .empty-heart:hover {
             opacity: 0;
           }
         }

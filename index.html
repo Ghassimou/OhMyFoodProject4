@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="sass/style.css" />
+      referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="sass/style.css">
   </head>
   <body>
     <div class="content__loader">
@@ -36,8 +34,7 @@
           ><img
             class="img"
             src="assets/images/logo/ohmyfood.png"
-            alt="logo de ohmyfood"
-          />
+            alt="logo de ohmyfood">
         </a>
       </header>
 
@@ -50,7 +47,7 @@
         </ul>
       </nav>
       <main>
-        <section class="section__heading">
+        <div class="section__heading">
           <h1 class="title">Réservez le menu qui vous convient</h1>
           <p class="txt">
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
@@ -58,11 +55,11 @@
           <div class="content__btn--purple">
             <button class="purple">Explorez nos restaurants</button>
           </div>
-        </section>
+        </div>
         <section class="section__btn">
           <h2 class="title">Fonctionnement</h2>
           <div class="content__btn--grey">
-            <article class="article__btn">
+            <div class="article__btn">
               <div class="content__circle__btn">
                 <span class="circle__num">1</span>
                 <button class="btn--grey">
@@ -70,16 +67,16 @@
                   >Choisissez un restaurant
                 </button>
               </div>
-            </article>
-            <article class="article__btn">
+            </div>
+            <div class="article__btn">
               <div class="content__circle__btn">
                 <span class="circle__num">2</span>
                 <button class="btn--grey">
                   <i class="icon--grey fa-solid fa-list"></i>Composez votre menu
                 </button>
               </div>
-            </article>
-            <article class="article__btn">
+            </div>
+            <div class="article__btn">
               <div class="content__circle__btn">
                 <span class="circle__num">3</span>
                 <button class="btn--grey">
@@ -87,158 +84,113 @@
                   restaurant
                 </button>
               </div>
-            </article>
+            </div>
           </div>
         </section>
         <section class="section__menu">
           <h2 class="title__menu">Restaurants</h2>
           <div class="content__menu">
-            <article class="menu">
+            <div class="menu">
               <a class="link__clic" href="restaurants/la-palette-du-gout.html">
                 <span class="square__new">Nouveau</span>
                 <img
                   class="img__plate"
                   src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                  alt="Image d'un plat à déguster"
-                />
+                  alt="Image d'un plat à déguster">
                 <div class="card">
                   <div class="txt">
                     <h3 class="card--title">La palette du goût</h3>
                     <p class="subtitle">Menilmontant</p>
                   </div>
-                
-                  <!-- vsersion version test mobile ------------------>
                   <div class="heart-like">
                     <div class="fill-heart">
-                      <input
-                        type="checkbox"
-                        id="filled-heart"
-                        name="filled-heart"
-                      />
-                      <label for="filled-heart"
-                        ><i class="filled-heart fa-solid fa-heart"></i
-                      ></label>
+                      <i class="filled-heart fa-solid fa-heart"></i>
                       <img
                         class="empty-heart"
                         src="assets/images/like/like.png"
-                        alt="button like"
-                      />
+                        alt="button like">
                     </div>
-              
                   </div>
-                  <!-- vsersion test mobile ------------------------>
                 </div>
               </a>
-            </article>
-            <article class="menu">
+            </div>
+            <div class="menu">
               <a class="link__clic" href="restaurants/la-note-enchantee.html">
                 <span class="square__new">Nouveau</span>
                 <img
                   class="img__plate"
                   src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                  alt="Image d'un plat à déguster"
-                />
+                  alt="Aller sur le menu la note enchantée">
                 <div class="card">
                   <div class="txt">
                     <h3 class="card--title">La note enchantée</h3>
                     <p class="subtitle">Charonne</p>
                   </div>
-                  <!-- vsersion version test mobile ------------------>
                   <div class="heart-like">
                     <div class="fill-heart">
-                      <input
-                        type="checkbox"
-                        id="filled-heart"
-                        name="filled-heart"
-                      />
-                      <label for="filled-heart"
-                        ><i class="filled-heart fa-solid fa-heart"></i
-                      ></label>
+                        <i class="filled-heart fa-solid fa-heart"></i>
                       <img
                         class="empty-heart"
                         src="assets/images/like/like.png"
-                        alt="button like"
-                      />
+                        alt="button like">
                     </div>
                   </div>
-                  <!-- vsersion test mobile ------------------------>
                 </div>
               </a>
-            </article>
-            <article class="menu">
+            </div>
+            <div class="menu">
               <a class="link__clic" href="restaurants/a-la-francaise.html">
-                <!-- <span class="square__new">Nouveau</span> -->
                 <img
                   class="img__plate"
                   src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                  alt="Image d'un plat à déguster"
-                />
+                  alt="Aller sur le menu à la française">
                 <div class="card">
                   <div class="txt">
                     <h3 class="card--title">A la française</h3>
                     <p class="subtitle">Cité Rouge</p>
                   </div>
-                  <!-- vsersion version test mobile ------------------>
                   <div class="heart-like">
                     <div class="fill-heart">
-                      <input
-                        type="checkbox"
-                        id="filled-heart"
-                        name="filled-heart"
-                      />
-                      <label for="filled-heart"
-                        ><i class="filled-heart fa-solid fa-heart"></i
-                      ></label>
+                        <i class="filled-heart fa-solid fa-heart"></i
+                          >
                       <img
                         class="empty-heart"
                         src="assets/images/like/like.png"
-                        alt="button like"
-                      />
+                        alt="button like">
                     </div>
                   </div>
-                  <!-- vsersion test mobile ------------------------>
                 </div>
               </a>
-            </article>
-            <article class="menu">
+            </div>
+            <div class="menu">
               <a class="link__clic" href="restaurants/le-delice-des-sens.html">
-                <!-- <span class="square__new">Nouveau</span> -->
                 <img
                   class="img__plate"
                   src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                  alt="Image d'un plat à déguster"
-                />
+                  alt="Aller sur le menu le délice des sens">
                 <div class="card">
                   <div class="txt">
                     <h3 class="card--title">Le délice des sens</h3>
                     <p class="subtitle">Folie-Méricourt</p>
                   </div>
-                  <!-- vsersion version test mobile ------------------>
                   <div class="heart-like">
                     <div class="fill-heart">
-                      <input
-                        type="checkbox"
-                        id="filled-heart"
-                        name="filled-heart"
-                      />
-                      <label for="filled-heart"
-                        ><i class="filled-heart fa-solid fa-heart"></i
-                      ></label>
+                        <i class="filled-heart fa-solid fa-heart"></i
+                          >
                       <img
                         class="empty-heart"
                         src="assets/images/like/like.png"
-                        alt="button like"
-                      />
+                        alt="button like">
                     </div>
                   </div>
                 </div>
               </a>
-            </article>
+            </div>
           </div>
         </section>
       </main>
       <footer class="footer__link">
-        <a class="logo" href="#">ohmyfood</a>
+        <a class="logo" href="../OhMyFood/index.html">ohmyfood</a>
         <span class="span__link">
           <a class="link" href="#"
             ><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a
