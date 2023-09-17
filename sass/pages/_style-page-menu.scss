@@ -76,52 +76,63 @@
   //Content like heart
   .heart-like {
     @include margin-rl(25px, 25px);
-    @include mobile {
-      width: 22px;
-      height: 25px;
-      position: relative;
+    width: 22px;
+    height: 25px;
+    position: relative;
 
-      //Emty heart i
-      .fa-regular {
-        position: absolute;
-        top: 2px;
-        left: 0;
-        font-size: 25px;
-        background-color: black;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        
-      }
+    //Emty heart i
+    .fa-regular {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      font-size: 25px;
+      background-color: black;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
-      //fill heart
-      .filled-heart {
-        z-index: 1;
-        position: absolute;
-        top: 2px;
-        left: 0;
-        font-size: 22px;
-        background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        opacity: 1;
-        transition: opacity 0.1s;
-        
-      }
+    //fill heart
+    .filled-heart {
+      z-index: 1;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      font-size: 25px;
+      background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0;
+      transition: opacity 0.1s;
+    }
 
-      //Hover desktop
-      @include tablet {
-        .filled-heart:hover  {
-          opacity: 1;
-        }
+    .filled-heart:hover {
+      opacity: 1;
+    }
 
-        .fa-regular:hover {
-          opacity: 0;
-        }
-      }
+    .fa-regular:hover {
+      opacity: 0;
     }
   }
+
+  //The pink headliner button card
+.content__btn__purple-card {
+  @include padding-tb(0, 40px);
+  .purple-card {
+    width: 218px;
+    height: 50px;
+    @include radius(color, $white, 25px);
+    @include padding-rl(18.75px, 18.75px);
+    @include btn__gradient-purple;
+    @include font-family("RobotoMedium", 16px);
+
+    &:hover {
+      @include btn__shadow-purple;
+      opacity: 80%;
+    }
+  }
+}
 }
 
 .card__content,
@@ -189,7 +200,7 @@
       }
     }
   }
- 
+
   .card__txt::before {
     content: "\f058";
     font-family: FontAwesome;
@@ -246,23 +257,7 @@
   }
 }
 
-//The pink headliner button card
-.content__btn__purple-card {
-  @include padding-tb(0, 40px);
-  .purple-card {
-    flex-basis: 218px;
-    height: 50px;
-    @include radius(color, $white, 25px);
-    @include padding-rl(18.75px, 18.75px);
-    @include btn__gradient-purple;
-    @include font-family("RobotoMedium", 16px);
 
-    &:hover {
-      @include btn__shadow-purple;
-      opacity: 80%;
-    }
-  }
-}
 
 //All responsive screen >= tablet
 .footer__link__card {

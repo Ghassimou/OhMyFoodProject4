@@ -492,41 +492,35 @@ main {
 .content__menu .card .heart-like {
   margin-right: 25px;
   margin-left: 25px;
+  width: 22px;
+  height: 25px;
+  position: relative;
 }
-@media (min-width: 0) {
-  .content__menu .card .heart-like {
-    width: 22px;
-    height: 25px;
-    position: relative;
-  }
-  .content__menu .card .heart-like .empty-heart {
-    width: 24px;
-    height: 25px;
-    position: absolute;
-    top: 0;
-    left: -1px;
-  }
-  .content__menu .card .heart-like .fill-heart {
-    z-index: 1;
-    position: relative;
-    top: 0;
-    left: 0;
-    font-size: 22px;
-    background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    opacity: 1;
-    transition: opacity 0.1s;
-  }
+.content__menu .card .heart-like .empty-heart {
+  width: 24px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: -1px;
 }
-@media (min-width: 0) and (min-width: 0) {
-  .content__menu .card .heart-like .filled-heart:hover {
-    opacity: 1;
-  }
-  .content__menu .card .heart-like .empty-heart:hover {
-    opacity: 0;
-  }
+.content__menu .card .heart-like .fill-heart {
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+.content__menu .card .heart-like .filled-heart:hover {
+  opacity: 1;
+}
+.content__menu .card .heart-like .empty-heart:hover {
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -789,44 +783,59 @@ main {
 .card__menu .heart-like {
   margin-right: 25px;
   margin-left: 25px;
+  width: 22px;
+  height: 25px;
+  position: relative;
 }
-@media (min-width: 0) {
-  .card__menu .heart-like {
-    width: 22px;
-    height: 25px;
-    position: relative;
-  }
-  .card__menu .heart-like .fa-regular {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    font-size: 25px;
-    background-color: black;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .card__menu .heart-like .filled-heart {
-    z-index: 1;
-    position: absolute;
-    top: 2px;
-    left: 0;
-    font-size: 22px;
-    background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    opacity: 1;
-    transition: opacity 0.1s;
-  }
+.card__menu .heart-like .fa-regular {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-size: 25px;
+  background-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
-@media (min-width: 0) and (min-width: 768px) {
-  .card__menu .heart-like .filled-heart:hover {
-    opacity: 1;
-  }
-  .card__menu .heart-like .fa-regular:hover {
-    opacity: 0;
-  }
+.card__menu .heart-like .filled-heart {
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-size: 25px;
+  background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.card__menu .heart-like .filled-heart:hover {
+  opacity: 1;
+}
+.card__menu .heart-like .fa-regular:hover {
+  opacity: 0;
+}
+.card__menu .content__btn__purple-card {
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+.card__menu .content__btn__purple-card .purple-card {
+  width: 218px;
+  height: 50px;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  padding-right: 18.75px;
+  padding-left: 18.75px;
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  font-family: "RobotoMedium";
+  font-size: 16px;
+  text-align: center;
+}
+.card__menu .content__btn__purple-card .purple-card:hover {
+  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.25);
+  opacity: 80%;
 }
 
 .card__content,
@@ -968,28 +977,6 @@ main {
   .footer__link__card .span__link i {
     padding-right: 11px;
   }
-}
-
-.content__btn__purple-card {
-  padding-top: 0;
-  padding-bottom: 40px;
-}
-.content__btn__purple-card .purple-card {
-  flex-basis: 218px;
-  height: 50px;
-  color: #fff;
-  border-radius: 25px;
-  border: none;
-  padding-right: 18.75px;
-  padding-left: 18.75px;
-  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-  font-family: "RobotoMedium";
-  font-size: 16px;
-  text-align: center;
-}
-.content__btn__purple-card .purple-card:hover {
-  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.25);
-  opacity: 80%;
 }
 
 @media (min-width: 1024px) {
