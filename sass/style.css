@@ -791,7 +791,7 @@ main {
   position: absolute;
   top: 2px;
   left: 0;
-  font-size: 25px;
+  font-size: 22px;
   background-color: black;
   -webkit-background-clip: text;
   background-clip: text;
@@ -802,7 +802,7 @@ main {
   position: absolute;
   top: 2px;
   left: 0;
-  font-size: 25px;
+  font-size: 22px;
   background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   background-clip: text;
